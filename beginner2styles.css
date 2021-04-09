@@ -1,0 +1,74 @@
+:root {
+  --nav_bk: #8a2be2;
+  --btn_bk: #5eea86;
+  --btn-shadow: #4f5952;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+}
+.nav {
+  background-color: var(--nav_bk);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+}
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+}
+.nav #learn_btn {
+  left: 495px;
+}
+.nav #home_btn {
+  left: 821px;
+}
+.nav #user_btn {
+  left: 1629px;
+}
+.level2_beginner_img img {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 2em;
+  opacity: 0.5;
+}
+.level2_beginner-task .btn {
+  text-decoration: none;
+  position: relative;
+  left: -3em;
+  top: 10em;
+  background-color: var(--nav_bk);
+  color: #fff;
+  padding: 0.5em;
+  margin: 0.2em;
+  box-shadow: 10px 5px 5px var(--btn-shadow);
+}
+.level2_beginner-task .task {
+  position: relative;
+  left: 10em;
+  top: 7em;
+  margin-bottom: 3em;
+}
+.level2_beginner-task textarea {
+  position: relative;
+  top: 2em;
+  left: 15%;
+  width: 10em;
+  height: 5em;
+  margin-top: 3em;
+  border-radius: 5px;
+  font-size: 45px;
+}
+textarea:focus {
+  outline: none;
+}
