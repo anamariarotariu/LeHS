@@ -1,6 +1,6 @@
 :root {
   --nav_bk: #8a2be2;
-  --btn-shadow: #4f5952;
+  --aside_bk: #bbb;
   --nav_font-color: #fff;
 }
 * {
@@ -38,9 +38,21 @@ a {
   position: absolute;
   right: 0;
 }
+.content a,
+.content p {
+  display: block;
+  font-size: 30px;
+}
 .content {
   position: relative;
-  top: 70px;
-  width: 20%;
-  display: inline-block;
+  top: 67px;
+  width: 12%;
+  height: 100%;
+  background-color: var(--aside_bk);
+}
+.documentation {
+  font-size: 20px;
+  top: 67px;
+  position: absolute;
+  left: 250px;
 }
