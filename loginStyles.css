@@ -2,9 +2,11 @@
   --buttons_login_page: #8a2be2;
   --border_login_page: #707070;
 }
-body {
+* {
   margin: 0;
   padding: 0;
+}
+body {
   font-family: "Lato", sans-serif;
   font-size: 30px;
 }
@@ -16,7 +18,10 @@ body {
   width: 100%;
   height: 64px;
 }
-.nav a {
+.nav ul {
+  list-style: none;
+}
+.nav ul li a {
   text-decoration: none;
   color: #fff;
   position: relative;

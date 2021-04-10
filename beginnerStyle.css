@@ -2,9 +2,11 @@
   --nav_bk: #8a2be2;
   --btn-shadow: #4f5952;
 }
-body {
+* {
   padding: 0;
   margin: 0;
+}
+body {
   font-family: "Lato", sans-serif;
   font-size: 30px;
   overflow: hidden;
@@ -16,14 +18,20 @@ body {
   width: 100%;
   height: 64px;
 }
-.nav a {
+.nav ul {
+  display: flex;
+  padding: 10px;
+  list-style: none;
+}
+.nav ul li a {
   text-decoration: none;
   color: #fff;
   position: relative;
-  top: 10px;
+  top: 5px;
   display: inline-block;
   position: relative;
   margin-left: 10px;
+  cursor: pointer;
 }
 .nav #learn_btn {
   left: 495px;
@@ -34,6 +42,7 @@ body {
 .nav #user_btn {
   right: 0;
   position: absolute;
+  top: 10px;
 }
 
 .level_beginner_img img {
@@ -142,7 +151,7 @@ textarea:focus,
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 10.25em;
+  top: 9.25em;
 }
 .hint_text {
   position: absolute;
@@ -177,10 +186,10 @@ textarea:focus,
 }
 .showSolution.css_part.level3 .hint-icon {
   left: 30em;
-  top: 11em;
+  top: 10em;
 }
 .showSolution.level3 .hint-icon {
-  top: 11em;
+  top: 10em;
   left: 27.25em;
 }
 .showSolution.css_part.level3 .hint_text {
@@ -201,7 +210,6 @@ textarea:focus,
   left: 7em;
   top: 7em;
 }
-
 .disappear {
   display: none;
 }
