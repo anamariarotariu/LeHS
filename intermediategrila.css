@@ -1,0 +1,203 @@
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  h3{
+      font-style: oblique;
+      color:rgb(48, 233, 177);
+        position: relative;
+        background-position: center;
+        top:15%;
+        left:25%;
+        font-size: 2em;
+      
+  }
+  .block{
+      display: block;
+      position: relative;
+      background-position: center;
+      top:20%;
+      left:20%;  
+      font-size: 1.5em;    
+  }
+  .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .split.left{
+    left: 0;
+    background-position: center;
+  }
+  .split.right{
+      right:0;
+      background-image: url("GRILA.png");
+      background-position: center;
+      background-size:cover;
+       opacity: 0.75; 
+     
+  }
+  
+  p{
+    position: relative; 
+    background-position: center;
+    top:20%;
+    left:20%;
+    font-style: oblique;
+    font-size: 1.7em;
+  }
+  .button a {
+    background-color: rgb(48, 233, 177);
+    box-shadow: 0 5px 0 rgb(51, 141, 114);
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .button a:hover {
+    background-color: rgb(38, 204, 154);
+  }
+  
+  .button a:active {
+    box-shadow: none;
+    top: 5px;
+  }
+  .nav {
+    position: relative;
+    background-color:rgb(48, 233, 177);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+   
+  }
+  .nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+  }
+  .nav #learn_btn {
+    left: 495px;
+  }
+  .nav #home_btn {
+    left: 821px;
+  }
+ 
+ .button {
+   position:relative;
+   top:40%;
+   left:40%;
+ }
+ .username{
+   position:relative;
+   display:inline-block;
+   left:1240px;
+ }
+ .username .content{
+  display: none;
+  position: absolute;
+  top:2em;
+  min-width: 160px;
+  
+  z-index: 1;
+ }
+ .username .content a{
+   background-color: rgb(38, 204, 154);
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  
+ }
+ .content a:hover {background-color: rgb(38, 204, 154);}
+ .username:hover .content {display: block;}
+ .username:hover a {background-color: rgb(38, 204, 154);}
+ @media (max-width:576px)
+ {
+   .container{
+     
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+   }
+  .split{
+    position:absolute;
+    width:100%;
+    height:100%;
+    
+  }
+  .split.right{
+    display:none;
+  }
+  .split.left{
+    width:100%;
+    height: 100%;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+  
+  }   
+  h3{ font-style: oblique;
+      color:rgb(38, 204, 154);
+      position: relative;
+      background-position: center;
+      top:0.5em;
+      left:0.7em;
+
+  }
+  p{position: relative; 
+    background-position: center;
+    font-size: 2em;
+    left:0.5em;
+    top:1em;
+
+  }
+  .block{
+font-size:2em;
+color:rgb(38, 204, 154);
+position: relative;
+top:10%;
+background-position: center;
+  }
+  .button {
+    position:relative;
+    top:30%;
+    left:20%;
+  }
+.nav{
+  width:100%;
+}
+.nav #back_btn{
+  left:0%;
+ 
+}
+.nav #learn_btn {
+  left: 25%;
+}
+.nav #home_btn {
+  left: 25%;
+}
+.username{
+  left:25%;
+}
+
+}
+ 
