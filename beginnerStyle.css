@@ -1,0 +1,207 @@
+:root {
+  --nav_bk: #8a2be2;
+  --btn-shadow: #4f5952;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  overflow: hidden;
+}
+.nav {
+  background-color: var(--nav_bk);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+}
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+}
+.nav #learn_btn {
+  left: 495px;
+}
+.nav #home_btn {
+  left: 821px;
+}
+.nav #user_btn {
+  right: 0;
+  position: absolute;
+}
+
+.level_beginner_img img {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.5;
+}
+.level_beginner-task .task {
+  position: relative;
+  left: 10em;
+  top: 7em;
+  margin-bottom: 3em;
+}
+
+/* pentru nivelul grila, CSS personalizat */
+.answer {
+  position: relative;
+  left: 11em;
+  display: flex;
+  align-items: center;
+  top: 7em;
+  margin-bottom: 1em;
+}
+.level_beginner-task input {
+  margin: 1em;
+  border: 2px solid black;
+  border-radius: 0;
+  background-color: blue;
+  cursor: pointer;
+  position: absolute;
+  left: -3em;
+  height: 40px;
+}
+.level_beginner-task.level3 .task {
+  position: absolute;
+  left: 8em;
+  top: 10em;
+}
+/* pentru nivelul de completat, CSS personalizat */
+.level_beginner-task.level2 textarea {
+  position: relative;
+  top: 2em;
+  left: 15%;
+  width: 10em;
+  height: 5em;
+  margin-top: 3em;
+  border-radius: 5px;
+  font-size: 45px;
+  font-style: italic;
+}
+textarea:focus,
+#task3-input:focus {
+  outline: none;
+}
+.level_beginner-task.level3_css {
+  position: absolute;
+  top: 3em;
+  left: -7.5em;
+}
+.level_beginner-task.level3_css #task3-input {
+  position: relative;
+  top: 4em;
+  left: 12em;
+  border-radius: 5px;
+  font-size: 45px;
+  font-style: italic;
+  height: 4em;
+  width: 9em;
+}
+.btn {
+  text-decoration: none;
+  position: relative;
+  top: 10em;
+  background-color: var(--nav_bk);
+  color: #fff;
+  padding: 0.5em;
+  margin: 0.2em;
+  box-shadow: 10px 5px 5px var(--btn-shadow);
+}
+.level_beginner-task.level3 #task3-input {
+  position: absolute;
+  left: 6em;
+  top: 13em;
+  font-size: 40px;
+  width: 15em;
+  height: 4em;
+}
+
+.level_beginner-task.level2 .btn {
+  left: -3em;
+}
+.level_beginner-task.level1 .btn {
+  left: 13em;
+}
+.level_beginner-task.level3 .btn {
+  left: 10em;
+  top: 25em;
+}
+.level_beginner-task.level3 .css_part.btn {
+  left: 10em;
+}
+.hint-icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10.25em;
+}
+.hint_text {
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 30px;
+  padding: 4px;
+  top: 7em;
+}
+.showSolution.level1 .hint_text {
+  top: 7em;
+  left: 1em;
+}
+.showSolution.level2 .hint_text {
+  top: 7em;
+  left: 20em;
+}
+.showSolution.level3 .hint_text {
+  top: 7em;
+  left: 9.5em;
+}
+.showSolution .hint-icon {
+  left: 27.5em;
+}
+.showSolution.level1 .hint-icon {
+  left: 24.5em;
+}
+.showSolution.css_part.level1 .hint-icon {
+  left: 36em;
+}
+.showSolution.css_part.level2 .hint-icon {
+  left: 41.5em;
+}
+.showSolution.css_part.level3 .hint-icon {
+  left: 30em;
+  top: 11em;
+}
+.showSolution.level3 .hint-icon {
+  top: 11em;
+  left: 27.25em;
+}
+.showSolution.css_part.level3 .hint_text {
+  top: 10em;
+  left: 29em;
+}
+.disappear {
+  display: none;
+}
+.showSolution.css_part.level1 .hint_text {
+  top: 7em;
+  left: 15em;
+}
+.showSolution.css_part.level2 .hint_text {
+  left: 25em;
+}
+.showSolution.css_part.level3 .hint_text {
+  left: 7em;
+  top: 7em;
+}
+
+.disappear {
+  display: none;
+}

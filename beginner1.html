@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="beginner1styles.css">
+    <link rel="stylesheet" href="beginnerStyle.css">
 
-    <title>Beginner</title>
+    <title>Beginner HTML</title>
 </head>
 <body>
     <nav class="nav">
@@ -17,7 +17,7 @@
         <a href="#home.html" id="home_btn"> Acasă</a>
         <a href="#" id="user_btn"> Utilizator</a>
     </nav>
-    <section class="level1_beginner-task">
+    <section class="level_beginner-task level1">
      <p class="task"> 1. La ce se folosește tag-ul „title”?</p>
      <div class="answer">
         <input type="radio" id="answer1" class="answer_input" name="answer">
@@ -34,8 +34,17 @@
     <a href="#" class="btn"> PRECEDENT</a>
     <a href="beginner2.html" class="btn"> URMĂTOR</a>
     </section>
-    <section class="level1_beginner_img">
+    <section class="level_beginner_img">
         <img src="images/grila.png" alt="pic">
+    </section>
+    <section class="showSolution level1">
+       <a href="#" class="hintIcon"> 
+           <img src="images/question-solid.svg" alt="question-mark" class="hint-icon">
+       </a>
+       <p class="hint_text disappear">
+        Acest tag se află în partea de head a codului HTML, deci nu este un element vizibil în pagină.
+       </p>
+     
     </section>
     <script src="beginnerScript.js"></script>
 </body>
