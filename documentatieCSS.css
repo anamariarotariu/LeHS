@@ -2,11 +2,15 @@
   --nav_bk: #8a2be2;
   --aside_bk: #bbb;
   --nav_font-color: #fff;
+  --border-bk: #ccc;
+  --aside-bk-color: #f1f1f1;
+  --font-color-aside: #000;
+  --btn-hover: #ddd;
 }
 * {
   margin: 0;
   padding: 0;
-  font-size: 40px;
+  overflow: hidden;
 }
 .nav {
   position: fixed;
@@ -14,6 +18,7 @@
   height: 7%;
   background-color: var(--nav_bk);
   display: flex;
+  font-size: 40px;
 }
 ul li {
   list-style: none;
@@ -38,21 +43,66 @@ a {
   position: absolute;
   right: 0;
 }
-.content a,
-.content p {
+.content {
+  position: absolute;
+  top: 7%;
+  float: left;
+  border: 1px solid var(--border-bk);
+  background-color: var(--aside-bk-color);
+  width: 15%;
+  height: 100%;
+}
+.content button {
   display: block;
+  background-color: inherit;
+  color: var(--font-color-aside);
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
   font-size: 30px;
 }
-.content {
-  position: relative;
-  top: 67px;
-  width: 12%;
-  height: 100%;
-  background-color: var(--aside_bk);
+.content button:hover {
+  background-color: var(--btn-hover);
+}
+.content button.active {
+  background-color: var(--border-bk);
+}
+#title_aside {
+  font-size: 30px;
 }
 .documentation {
-  font-size: 20px;
-  top: 67px;
+  float: left;
+  padding: 0 12px;
+  width: 85%;
+  border-left: none;
+  height: 100%;
   position: absolute;
-  left: 250px;
+  top: 7.5%;
+  left: 15%;
+  display: none;
+}
+.documentation h3 {
+  margin-bottom: 3em;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 35px;
+}
+.documentation span {
+  border: 1px solid firebrick;
+}
+.documentation p {
+  font-size: 30px;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-family: "Montserrat", sans-serif;
+}
+.documentation span {
+  color: var(--nav_bk);
+  font-weight: 700;
+  font-style: italic;
+  border: none;
 }

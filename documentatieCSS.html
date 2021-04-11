@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="documentatieCSS.css">
+    <title>Learn CSS</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="#" id="back_btn">Înapoi</a>
+                    <a href="#" id="home_btn">Acasă</a>
+                    <a href="#" id="login_btn"> Autentifică-te</a>
+                    <a href="#" id="user_btn"> Utilizator</a>
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <p id="title_aside"> Learn CSS</p>
+        <button class="doclinks" onmouseup="openDoc(event, 'Link')">CSS Link</button>
+        <button class="doclinks" onmouseup="openDoc(event, 'Selectors')">CSS Selectors</button>
+        <button class="doclinks" onmouseup="openDoc(event, 'Specificity')">CSS Specificity</button>
+        <button class="doclinks" onmouseup="openDoc(event, 'Border')">CSS Border</button>
+        <button class="doclinks" onmouseup="openDoc(event, 'Padding')">CSS Padding</button>
+        <button class="doclinks" onmouseup="openDoc(event, 'Margin')">CSS Margin</button>
+        <button class="doclinks" onmouseup="openDoc(event, 'Position')">CSS Position</button>
+        <button class="doclinks" onmouseup="openDoc(event, 'MediaQuery')">CSS Media Query</button>
+        
+        
+    </div>
+    <div id="Link" class="documentation">
+        <h3>CSS Link</h3>
+        <p>Principalul rol al fișierelor CSS este de a stiliza fișierele HTML. Însă, acest lucru este posibil doar dacă se vor conecta cele două fișiere. Acest lucru se face cu ajutorul tag-ului <i>link</i>, la care vom adăuga atributul <i>href=</i>, iar între ghilimele vom introduce numele fișierului CSS. Astfel, toate caracteristicile componentelor HTML se vor aplica acestora.</p>
+        <p>
+            <span>De reținut!</span>
+            Tag-ul link este indicat să fie plasat în partea de head a documentului HTML, deoarece este un element care nu este vizibil în conținutul propriu-zis al paginii.</p>
+    </div>
+    <div id="Selectors" class="documentation">
+        <h3>CSS Selectors</h3>
+        <p>Pentru a putea stiliza elementele HTML, acestea trebuie selectate. Acest lucru este posibil fie în funcție de tag-ul pe care îl are elementul respectiv, fie adaugându-i o clasă sau un id. Există și un selector special, <span>*</span>, care selectează toate elementele aflate în pagină. În cazul în care elementului îi va fi adaugată o clasă, sintaxa din fișierul CSS este <span>.nume_clasă</span> , iar dacă se adaugă un id, sintaxa este <span>#nume_id</span>. Ambele structuri vor fi urmate de acolade în interiorul cărora se vor afla proprietățile necesare stilizării împreună cu valorile.</p>
+        
+        <p>
+            <span>De reținut!</span>
+           Este indicată folosirea clasei atunci când dorim să stilizăm elemente multiple și a id-ului atunci când caracteristicile sunt aplicate unui singur element.
+        </p>
+        <p>De asemenea, unui element i se pot adăuga mai multe clase sau atât clase, cât și id-uri în funcție de stilizarea pe care dorim să i-o aplicăm. Pentru a aplica același stil mai multor elemente le putem concatena folosind <span>,</span> </p>
+    </div>
+    <script src="documentatie.js"></script>
+</body>
+</html>
