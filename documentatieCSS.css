@@ -84,14 +84,18 @@ a {
   left: 15%;
   display: none;
 }
-.documentation h3 {
+.documentation h3,
+.documentation h4 {
   margin-bottom: 3em;
   text-align: center;
   letter-spacing: 0.1em;
   font-size: 35px;
 }
-.documentation span {
-  border: 1px solid firebrick;
+.documentation h4 {
+  font-size: 30px;
+}
+.documentation .final_paragraph {
+  text-align: center;
 }
 .documentation p {
   font-size: 30px;
@@ -99,6 +103,7 @@ a {
   margin-left: 1em;
   margin-right: 1em;
   font-family: "Montserrat", sans-serif;
+  overflow: visible;
 }
 .documentation span {
   color: var(--nav_bk);
