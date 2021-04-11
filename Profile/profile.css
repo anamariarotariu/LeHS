@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+}
+
+span {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img {
+    width: 15vw;
+}
+
+.text {
+    font-size: 2vw;
+}
+
+#reset {
+    background-color: #8a2be2;
+    box-shadow: 0 5px 0 #6d2caa;
+    border: none;
+    color: white;
+    font-size: 1vw;
+    padding: 0.8vw 1.3vw;
+    margin: 5px;
+    position: relative;
+    text-decoration: none;
+}
+
+#reset:hover {
+    background-color: #6a2ea1;
+}
+
+.nav {
+    position: relative;
+    background-color: #8a2be2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2vw;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    top: 10px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+
+.nav #learn_btn {
+    left: 0;
+}
+
+.nav #home_btn {
+    left: 33%;
+}
+
+.username {
+    position: relative;
+    display: inline-block;
+    left: 66%;
+}
+
+.username .content {
+    display: none;
+    position: absolute;
+    top: 2em;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.username .content a {
+    background-color: #8a2be2;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.content a:hover {
+    background-color: #6a2ea1;
+}
+
+.username:hover .content {
+    display: block;
+}
+
+.username:hover a {
+    background-color: #6a2ea1;
+}
