@@ -71,7 +71,7 @@
                     Elementul al treilea în ierarhie este alcătuit din clase, pseudo-clase (precum <span>hover, focus, active</span>) sau atribute.
                 </p>
                 <p>Cel de-al patrulea element este tag-ul și pseudo-elementele, precum <span>before, after</span>. </p>
-                <p>Cel mai puțin specific element este selectorul universal, *.</p>
+                <p>Cel mai puțin specific element este selectorul universal, *. Pentru a calcula specificitatea, se poate folosi un calculator special creat pentru acest lucru.</p>
         <p class="final_paragraph"> Gata, s-a terminat!</p>
     </div>
     <div id="Border" class="documentation">
@@ -102,14 +102,16 @@
     <div id="Position" class="documentation">
         <h3>CSS Position</h3>
         <p>Proprietatea <span>position</span> specifică modul în care un element este poziționat, fiind afectat și modul în care sunt poziționate și celelalte elemente.</p>
-        <p><span>De reținut!</span> Există 5 valori pe care le poate avea această proprietate și anume, <span>static, relative, fixed, absolute, sticky</span>.Valoarea default este <span>static</span>. Cele mai folosite valori sunt absolute și relative. Absolute va poziționa elementul în raport cu primul părinte care are poziția diferită de cea default, iar relative îl va poziționa în raport cu poziția sa default.
+        <p><span>De reținut!</span> Există 5 valori pe care le poate avea această proprietate și anume, <span>static, relative, fixed, absolute, sticky</span>. Valoarea default este <span>static</span>. Cele mai folosite valori sunt absolute și relative. Absolute va poziționa elementul în raport cu primul părinte care are poziția diferită de cea default, iar relative îl va poziționa în raport cu poziția sa default. Proprietățile absolut necesare atunci când se folosește <span>position: absolute;</span> sunt <span>top, right, bottom și left</span>.
         </p> 
+        <p>Valoarea <span>sticky</span> a unui element va lipi acel element de un altul atunci când are loc acțiunea de scroll, iar <span>fixed</span> va plasa elementul într-o poziție fixă indiferent de modificările ce au loc în pagină.</p>
         <p class="final_paragraph"> Gata, s-a terminat!</p>
     </div>
     <div id="MediaQuery" class="documentation">
         <h3>CSS Media Query</h3>
-        <p></p>
-        <p class="final_paragraph"> Gata, s-a terminat!</p>
+        <p>Media query-urile sunt folosite pentru a realiza un site <span>responsive</span>, în sensul că acesta își va modifica proprietățile în funcție de dimensiunea dispozitivului de pe care este accesat.</p>
+        <p>Sintaxa standard este <span>@media (breakpoint) {proprietăți modificate} </span>, unde breakpoint reprezintă dimensiunea ecranului de la care se aplică acele proprietăți modificate aflate între acolade. De obicei, breakpoint-ul se setează folosind proprietățile <span>max-width</span> și <span>min-width</span>.</p>
+        <p class="final_paragraph"> Felicitări că ai parcurs tot modulul de învățare!</p>
     </div>
     
     <script src="documentatie.js"></script>
