@@ -111,3 +111,40 @@ a {
   font-style: italic;
   border: none;
 }
+@media (max-width: 776px) {
+  .content {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 15%;
+    height: 100%;
+  }
+
+  .content button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 12px 6px;
+    width: 7%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .content button:hover {
+    background-color: #ddd;
+  }
+
+  .content button.active {
+    background-color: #ccc;
+  }
+
+  .documentation {
+    float: left;
+    border: 1px solid #ccc;
+    width: 75%;
+    border-left: none;
+    display: none;
+  }
+}
