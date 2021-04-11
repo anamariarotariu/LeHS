@@ -114,8 +114,8 @@ a {
 @media (max-width: 776px) {
   .content {
     float: left;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border: 1px solid var(--border-bk);
+    background-color: var(--aside-bk-color);
     width: 15%;
     height: 100%;
   }
@@ -123,7 +123,7 @@ a {
   .content button {
     display: block;
     background-color: inherit;
-    color: black;
+    color: var(--font-color-aside);
     padding: 12px 6px;
     width: 7%;
     border: none;
@@ -133,16 +133,16 @@ a {
   }
 
   .content button:hover {
-    background-color: #ddd;
+    background-color: var(--btn-hover);
   }
 
   .content button.active {
-    background-color: #ccc;
+    background-color: var(--border-bk);
   }
 
   .documentation {
     float: left;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-bk);
     width: 75%;
     border-left: none;
     display: none;
