@@ -1,0 +1,15 @@
+[{
+        "user": "testUser1",
+        "days": 5,
+        "solvedLevels": 12,
+        "readPages": 4,
+        "score": 142
+    },
+    {
+        "user": "testUser2",
+        "days": 2,
+        "solvedLevels": 3,
+        "readPages": 1,
+        "score": 40
+    }
+]
