@@ -1,0 +1,15 @@
+[{
+        "id": "html",
+        "level": "Advanced",
+        "nr": 3,
+        "question": "Realizati un formular de tip sign-in, care sa contina campuri pentru nume, prenume, parola, email si un buton de submit",
+        "hint": "wip"
+    },
+    {
+        "id": "html",
+        "level": "Advanced",
+        "nr": 3,
+        "question": "Scrieti un media query pentru a seta culoarea rosie de fundal pentru elementele h1 si o bordura de 2 pixeli, dotted si verde pentru paragrafe pornind de la latimea de 576 de pixeli",
+        "hint": "wip"
+    }
+]
