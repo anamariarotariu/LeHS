@@ -1,0 +1,275 @@
+:root {
+   
+    --left-btn-hover-color: rgb(230, 75, 14);
+    --right-btn-hover-color: rgb(33, 149, 202);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    text-decoration: none;
+   
+    
+  }
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+ 
+  }
+  .split.left .btn:hover {
+    background-color: var(--left-btn-hover-color);
+    border-color: var(--left-btn-hover-color);
+  }
+  .split.right .btn:hover {
+    background-color: var(--right-btn-hover-color);
+    border-color: var(--right-btn-hover-color);
+  }
+  .split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index:1;
+  }
+  .split.left {
+    left: 0;
+    background: url("HTML.png");
+    background-size: cover;
+    background-position: center center; 
+    
+  }
+ 
+
+   .split.right {
+    right: 0;
+    background: url("CSS.png");
+    background-size: cover;
+    background-position:  center center;
+   
+  }
+  
+  
+  
+  .btn.left.Learn{
+    display: flex;
+    align-items: center;
+    left: 23%;
+    top: 40%;
+    width: 7em;
+    height:2em;
+    color: black;
+    font-size: 20px;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 1em;
+    
+  }
+  a{
+  text-decoration: none}
+
+  .btn.right.Learn{
+    display: flex;
+    align-items: center;
+    left: 53%;
+    top: 40%;
+    width: 7em;
+    height:2em;
+    color: black;
+    font-size: 20px;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 1em;
+  }
+ 
+  .btn.left.Practice {
+    display: flex;
+    align-items: center;
+    left: 50%;
+    top: 40%;
+    width: 7em;
+    height:2em;
+    color: black;
+    font-size: 20px;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 1em;
+  }
+  .btn.right.Practice {
+    display: flex;
+    align-items: center;
+    left: 27%;
+    top: 40%;
+    width: 7em;
+    height:2em;
+    color: black;
+    font-size: 20px;
+    border-radius: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 1em;
+    
+  }
+  
+  .nav {
+    position: relative;
+    background-color:blueviolet;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+   
+  }
+  .nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+  }
+  .nav #learn_btn {
+    left: 495px;
+  }
+  .nav #home_btn {
+    left: 821px;
+  }
+  .username{
+    position:relative;
+    display:inline-block;
+    left:1230px;
+  }
+  .username .content{
+    position:absolute;
+    
+   display: none;
+   position: absolute;
+   top:2em;
+   min-width: 160px;
+   z-index: 1;
+  }
+  .username .content a{
+    position:absolute;
+  
+    background-color: blueviolet;
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+   
+  }
+  .content a:hover {background-color: blueviolet;}
+  .username:hover .content {display: block;}
+  .username:hover a {background-color: blueviolet;}
+
+
+
+ @media(max-width:1083px){
+  .split{position:absolute;
+    height: 50%;
+    width:100%;
+  }
+   .split.left{
+     top:50px;
+     
+   }
+   
+   .split.right{
+     top:50%;}
+
+   .nav{top:0%;
+      width:100%;
+      height:50px;
+      font-size: 1em;
+
+    }
+    .nav a{
+      top:1em;
+    }
+    .nav #back_btn{
+      left:0%;
+  
+    }
+    .nav #learn_btn {
+      left: 25%;
+    }
+    .nav #home_btn {
+      left: 25%;
+    }
+    .username{
+      left:25%;
+    }
+    .username.content{
+      top:1em;
+    }
+    .btn.left.Learn{
+      position: relative;
+      top:30%;
+      left:15%;
+      font-size:1em;
+    }
+    .btn.left.Practice{
+      position: relative;
+      top:30%;
+      left:43%;
+      font-size:0.8em;
+    }
+    .btn.right.Learn{
+      font-size:1em;
+      position: relative;
+      top:35%;
+      left:45%;
+    }
+    .btn.right.Practice{
+      position: relative;
+      font-size:0.8em;
+      left:23%;
+      top:30%;
+    }
+  }
+ 
+ 

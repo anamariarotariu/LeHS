@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="learnHTML.css">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="nav">
+    <a href="#" id="back_btn"> Back</a>
+    <a href="#learn.html" id="learn_btn">Learn</a>
+    <a href="#home.html" id="home_btn"> Home</a>
+    <section class= "username">
+        <a href="#">Username</a>
+        <div class="content">
+            <a href="#">Profile</a>
+            <a href="#">Statistics</a>
+            <a href="#">Logout</a>
+        </div>
+
+    </section>
+</nav>
+    <section class="learn">
+        <h3>Learn HTML</h3>
+            <button class="links" onmouseover="openLink(event, 'Tags')">HTML Tags</button>
+            <button class="links" onmouseover="openLink(event, 'Tabel')">HTML Tabel</button>
+            <button class="links" onmouseover="openLink(event, 'Lists')">HTML Lists</button>
+            <button class="links" onmouseover="openLink(event, 'Images')">HTML Images</button>
+            <button class="links" onmouseover="openLink(event, 'Links')">HTML Links</button>
+            <button class="links" onmouseover="openLink(event, 'Buttons')">HTML Buttons</button>
+            <button class="links" onmouseover="openLink(event, 'Forms')">HTML Forms</button>
+            <button class="links" onmouseover="openLink(event,  'Attributes')">HTML Attributes</button>
+       
+
+    </section>
+
+    <div id="Tags" class="content">
+        <h3>TAGS</h3>
+        <p>O etichetă HTML este un cuvânt sau o literă specială înconjurat de paranteze unghiulare.
+             Multe elemente au o etichetă de deschidere și o etichetă de închidere.Unele elemente nu au o etichetă de închidere.
+             Acestea se numesc elemente goale. <br>
+            1.html ... /html  - Elementul rădăcină 
+             Toate paginile web încep cu elementul html. Se mai numește și elementul rădăcină, deoarece se află la rădăcina arborelui elementelor care alcătuiesc o pagină web.<br>
+            2.head ... /head - Capul documentului
+            Elementul principal conține informații despre pagina web, spre deosebire de conținutul paginii web în sine.<br>
+            3. title ... /title - Titlul paginii
+            Elementul titlu conține titlul paginii. Titlul este afișat în bara de titlu a browserului (bara din partea de sus a ferestrei browserului), precum și în marcaje, rezultatele motorului de căutare și multe alte locuri.<br>
+            4. body ... /body - Conținutul paginii
+            Elementul body apare după elementul head din pagină. Ar trebui să conțină tot conținutul paginii dvs. web: text, imagini și așa mai departe.<br>
+            5.h1 ...  /h1 - Un titlu de secțiune
+            Titlurile vă permit să împărțiți conținutul paginii în bucăți lizibile. Funcționează la fel ca titlurile și subtitlurile dintr-o carte sau un raport<br>
+            6.p ... /p - Un paragraf
+            Elementul p vă permite să creați paragrafe de text. Majoritatea browserelor afișează paragrafe cu un spațiu vertical între fiecare paragraf, separând frumos textul.<br>
+            7. div ... /div - Un container la nivel de bloc pentru conținut
+            Elementul div este un container generic pe care îl puteți utiliza pentru a adăuga mai multă structură la conținutul paginii.<br>
+            8.span ... /span - Un container inline pentru conținut
+            Elementul span este similar cu div în sensul că este folosit pentru a adăuga structură la conținutul dvs.<br>
+        </p>
+      </div>
+      
+      <div id="Tabel" class="content">
+        <h3>Tabele</h3>
+        <p>Eticheta table definește un tabel HTML.
+            Fiecare rând de tabel este definit cu o etichetă tr. Fiecare antet de tabel este definit cu o etichetă th. Fiecare tabel de date / celulă este definit cu o etichetă td.
+            În mod implicit, textul din elementele th este îngroșat și centrat.
+            În mod implicit, textul din elementele td este regulat și aliniat la stânga</p>
+      </div>
+      
+      <div id="Lists" class="content">
+        <h3>Liste</h3>
+        <p>
+            O listă neordonată începe cu eticheta ul. Fiecare articol din listă începe cu eticheta li 
+            Elementele listei vor fi marcate în mod implicit cu bullets.<br>
+            O listă ordonată începe cu eticheta  ol. Fiecare articol din listă începe cu eticheta li.
+            Elementele listei vor fi marcate în mod implicit cu numere</p>
+      </div>
+
+      <div id="Images" class="content">
+        <h3>Imagini</h3>
+        <p>
+            Eticheta HTML  img> este utilizată pentru a încorpora o imagine într-o pagină web.
+            Imaginile nu sunt inserate tehnic într-o pagină web; imaginile sunt legate de pagini web. Eticheta img creează un spațiu de reținere pentru imaginea de referință.
+            Eticheta img este goală, conține numai atribute și nu are o etichetă de închidere.
+            Eticheta img are două atribute necesare:
+            1.src - Specifică calea către imagine
+            2.alt - Specifică un text alternativ pentru imagine
+      </div>
+
+      <div id="Links" class="content">
+        <h3>Link uri</h3>
+        <p>
+           
+      Linkurile HTML sunt hyperlinkuri.
+      Puteți face clic pe un link și săriți la un alt document.
+      Când mutați mouse-ul peste o legătură, săgeata mouse-ului se va transforma într-o mână mică.
+      Un link nu trebuie să fie text. Un link poate fi o imagine sau orice alt element HTML!
+      Cel mai important atribut al elementului a este atributul href, care indică destinația link-ului.
+     Textul linkului este partea care va fi vizibilă pentru cititor.
+     Dând clic pe textul linkului, cititorul va fi trimis la adresa URL specificată.
+     a href="intermediateHTMLgrila.html" /a.
+      </div>
+
+      <div id="Buttons" class="content">
+        <h3>Butoane</h3>
+        <p>
+            Elementul HTML button reprezintă un buton pe care se poate face clic, utilizat pentru a trimite formulare sau oriunde într-un document pentru funcționalitatea accesibilă a butonului standard. În mod implicit, butoanele HTML sunt prezentate într-un stil asemănător platformei pe care rulează agentul utilizator, dar puteți schimba aspectul butoanelor cu CSS</p>
+      </div>
+      <div id="Forms" class="content">
+        <h3>Formulare</h3>
+        <p>
+            Un formular HTML este utilizat pentru a colecta datele introduse de utilizator. Intrarea utilizatorului este trimisă cel mai adesea către un server pentru procesare.
+             Elementul form  este un container pentru diferite tipuri de elemente de intrare, cum ar fi: câmpuri de text, casete de selectare, butoane radio, butoane de trimitere.
+             Elementul HTML input este cel mai utilizat element de formă.
+             Un element input poate fi afișat în mai multe moduri, în funcție de atributul de tip
+            Exemple:
+            1.input type="text"	<br>
+            2.input type="radio"<br>
+            3.input type="checkbox"	<br>
+            4.input type="submit"	<br>
+            5.input type="button"<br>
+            Butoanele radio permit unui utilizator să selecteze UNA dintre un număr limitat de opțiuni.
+            Casetele de selectare permit unui utilizator să selecteze ZERO sau MAI MULTE opțiuni dintr-un număr limitat de opțiuni.
+            Submit:Butonul trimite datele formularului către server. Acesta este o valoare implicită dacă atributul nu este specificat pentru butoanele asociate cu un form sau dacă atributul este o valoare goală sau nevalidă.<br>
+        </p>
+</div>
+        <div id="Attributes" class="content">
+            <h3>Class&Id</h3>
+            <p>
+            Atributul de clasă este adesea folosit pentru a indica un nume de clasă într-o foaie de stil. De asemenea, poate fi folosit de un JavaScript pentru a accesa și manipula elemente cu numele clasei specifice.
+            Atributul de clasă poate fi utilizat pe orice element HTML.
+            Numele clasei este case sensitive.Elementele HTML pot aparține mai multor clase.
+            Pentru a defini mai multe clase, separați numele claselor cu un spațiu, de ex. div class = "split right". Elementul va fi stilizat în conformitate cu toate clasele specificate.<br>
+            Atributul id specifică un id unic pentru un element HTML. Valoarea atributului id trebuie să fie unică în cadrul documentului HTML.
+            Atributul id este utilizat pentru a indica o declarație de stil specifică într-o foaie de stil. De asemenea, este folosit de JavaScript pentru a accesa și manipula elementul cu ID-ul specific.
+            Sintaxa pentru id este: scrieți un caracter hash (#), urmat de un nume de id. Apoi, definiți proprietățile CSS în interiorul acoladelor {}.
+        
+        </p>
+        </div>
+        <script src="learn.js"></script>
+</body>
+</html>

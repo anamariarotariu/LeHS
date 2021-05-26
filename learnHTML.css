@@ -1,0 +1,156 @@
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+  .nav {
+    position: relative;
+    background-color:blueviolet;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+   
+  }
+  .nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+  }
+  .nav #learn_btn {
+    left: 495px;
+  }
+  .nav #home_btn {
+    left: 821px;
+  }
+  
+  .username{
+    position:relative;
+    display:inline-block;
+    left:1230px;
+  }
+  .username .content{
+    position:absolute;
+    
+   display: none;
+   position: absolute;
+   top:2em;
+   min-width: 160px;
+   z-index: 1;
+  }
+  .username .content a{
+    position:absolute;
+  
+    background-color: blueviolet;
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+   
+  }
+  .content a:hover {background-color: blueviolet;}
+  .username:hover .content {display: block;}
+  .username:hover a {background-color: blueviolet;}
+
+
+  .learn {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 20%;
+    height: 100%;
+  }
+  
+  
+  .learn button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  
+  .learn button:hover {
+    background-color: #ddd;
+  }
+  
+  .learn button.active {
+    background-color: #ccc;
+  }
+  
+  
+  .content {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 100%;
+    display: none;
+  }
+  @media (max-width:576px)
+  {.nav{
+    width:100%;
+  }
+  .nav #back_btn{
+    left:0%;
+   
+  }
+  .nav #learn_btn {
+    left: 25%;
+  }
+  .nav #home_btn {
+    left: 25%;
+  }
+  .username{
+    left:25%;
+  }
+  .learn {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 15%;
+    height: 100%;
+  }
+  
+  
+  .learn button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 12px 6px;
+    width: 7%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  
+  .learn button:hover {
+    background-color: #ddd;
+  }
+  
+  .learn button.active {
+    background-color: #ccc;
+  }
+  
+  
+  .content {
+    float: left;
+    border: 1px solid #ccc;
+    width: 75%;
+    border-left: none;
+    display: none;
+  }
+  }
