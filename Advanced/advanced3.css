@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+}
+
+span {
+    display: flex;
+    justify-content: start;
+}
+
+h4 {
+    font-style: oblique;
+    color: #8a2be2;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    top: 10%;
+    left: 10%;
+    background-position: center;
+}
+
+.split.right {
+    right: 0;
+    background-image: url("code1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav {
+    position: relative;
+    background-color: #8a2be2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2vw;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    top: 10px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+
+.nav #back_btn {
+    left: 0;
+}
+
+.nav #learn_btn {
+    left: 25%;
+}
+
+.nav #home_btn {
+    left: 50%;
+}
+
+.username {
+    position: relative;
+    display: inline-block;
+    left: 75%;
+}
+
+.username .content {
+    display: none;
+    position: absolute;
+    top: 2em;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.username .content a {
+    background-color: #8a2be2;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.content a:hover {
+    background-color: #6a2ea1;
+}
+
+.username:hover .content {
+    display: block;
+}
+
+.username:hover a {
+    background-color: #6a2ea1;
+}
+
+.button {
+    position: relative;
+    top: 15%;
+    left: 30%;
+}
+
+.button a {
+    background-color: #8a2be2;
+    box-shadow: 0 5px 0 #6d2caa;
+    color: white;
+    font-size: 1vw;
+    padding: 0.8vw 1.3vw;
+    margin: 5px;
+    position: relative;
+    text-decoration: none;
+}
+
+.button a:hover {
+    background-color: #6a2ea1;
+}
+
+.button a:active {
+    box-shadow: none;
+    top: 5px;
+}
+
+.sub {
+    background-color: #8a2be2;
+    box-shadow: 0 5px 0 #6d2caa;
+    position: relative;
+    color: white;
+    border: none;
+    font-size: 0.7vw;
+    padding: 0.5vw 1vw;
+}
+
+.sub:hover {
+    background-color: #6d2caa;
+}
+
+.sub:active {
+    box-shadow: none;
+    top: 5px;
+}

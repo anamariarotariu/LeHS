@@ -1,0 +1,20 @@
+[{
+        "id": "html",
+        "level": "Advanced",
+        "nr": 2,
+        "question": "Corectati urmatoarea secventa astfel incat codul sa fie valid: <br> ",
+        "text": "<img src='https://storyset.com/illustration/appreciation/bro'>  </img>",
+        "answer": "<img src='https://storyset.com/illustration/appreciation/bro' alt='ceva'>",
+        "hint": "Incearca atributul alt",
+        "max": 73
+    },
+    {
+        "id": "html",
+        "level": "Advanced",
+        "nr": 2,
+        "question": "Corectati secventa de cod astfel incat toate elementele din clasa btn sa aiba padding-ul de 20 de pixeli: <br> #btn{ padding: 20px;",
+        "answer": ".btn{padding: 20px;}",
+        "hint": "Clasele se acceseaza cu .(punct), nu cu #",
+        "max": 20
+    }
+]

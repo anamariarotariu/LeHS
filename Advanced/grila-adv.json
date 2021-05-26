@@ -1,0 +1,23 @@
+[{
+        "id": "html",
+        "level": "Advanced",
+        "nr": 1,
+        "question": "Pentru a construi o lista neordonata, folosim:",
+        "a1": "&ltul&gt &ltli&gt &lt/li&gt &lt/ul&gt",
+        "a2": "&ltul&gt &ltle&gt &lt/le&gt &lt/ul&gt",
+        "a3": "&ltol&gt &ltli&gt &lt/li&gt &lt/ul&gt",
+        "corectAns": "a1",
+        "hint": "Pentru a crea o lista neordonata se foloseste tagul <ul>, iar pentru fiecare element, tagul <li>"
+    },
+    {
+        "id": "css",
+        "level": "Advanced",
+        "nr": 1,
+        "question": "Pentru a face o pagina web responsive, se folosesc:",
+        "a1": "media arrays",
+        "a2": "media queries",
+        "a3": "style change ",
+        "corectAns": "a2",
+        "hint": "media arrays"
+    }
+]

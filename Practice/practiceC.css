@@ -1,0 +1,48 @@
+body {
+    background-image: url("./practiceCSS.png");
+    background-size: 82%;
+    background-repeat: no-repeat;
+    background-position-y: 20%;
+    background-position-x: center;
+}
+
+.btn {
+    background-color: transparent;
+    color: gray;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 4vw;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    width: max-content;
+}
+
+.btn:hover {
+    background-color: rgba(133, 128, 128, 0.342);
+    color: black;
+}
+
+span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.continue {
+    align-self: flex-end;
+    position: absolute;
+    top: 35%;
+    right: 20%;
+}
+
+.start {
+    align-self: flex-start;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+}
