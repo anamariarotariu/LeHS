@@ -56,7 +56,7 @@ a {
   display: block;
   background-color: inherit;
   color: var(--font-color-aside);
-  padding: 22px 16px;
+  padding: 1em 0.75em;
   width: 100%;
   border: none;
   outline: none;
@@ -69,11 +69,6 @@ a {
 }
 .choose__topic--section button.active {
   background-color: var(--border-bk);
-}
-#title_aside {
-  margin-bottom: 1em;
-  font-size: 25px;
-  margin-left: 1em;
 }
 .documentation {
   float: left;
@@ -135,6 +130,8 @@ a {
   left: 10%;
 }
 /* responsive design */
+@media (max-width: 965px) {
+}
 @media (max-width: 776px) {
   .choose__topic--section {
     float: left;
