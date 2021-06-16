@@ -1,275 +1,137 @@
-:root {
-   
-    --left-btn-hover-color: rgb(230, 75, 14);
-    --right-btn-hover-color: rgb(33, 149, 202);
-    --hover-width: 75%;
-    --other-width: 25%;
-    --speed: 1000ms;
-  }
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Roboto", sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-  }
+body{
+  background-color:#F0DDF9 ;
+}
 
-  .btn {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 50%;
-    top: 40%;
-    text-decoration: none;
-   
-    
-  }
-  .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
- 
-  }
-  .split.left .btn:hover {
-    background-color: var(--left-btn-hover-color);
-    border-color: var(--left-btn-hover-color);
-  }
-  .split.right .btn:hover {
-    background-color: var(--right-btn-hover-color);
-    border-color: var(--right-btn-hover-color);
-  }
-  .split {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    z-index:1;
-  }
-  .split.left {
-    left: 0;
-    background: url("HTML.png");
-    background-size: cover;
-    background-position: center center; 
-    
-  }
+h4{
+  margin-top:4vh;
+}
+img{
+  width:3vw;
+  height: 3vw;
  
 
-   .split.right {
-    right: 0;
-    background: url("CSS.png");
-    background-size: cover;
-    background-position:  center center;
-   
-  }
+}
+.big-square{
+  width:70vw;
+  height:70vh;
   
+  align-self: center;
+  margin-top: 7%;
+  margin-left:15%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  border-radius: 10px;
+}
+h4{
+  color: #240144;
+  font-size: 3vw;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color:floralwhite;
+}
+.learn-html-square{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1;
+  border:#240144 solid;
+  border-radius: 10px;
+  background-color: floralwhite;
+}
+.learn-css-square{background-color: floralwhite;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row: 1;
+  border:#240144 solid;
+  border-radius: 10px;
+}
+.practice-html-square{background-color: floralwhite;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 2;
+  border:#240144 solid;
+  border-radius: 10px;
+}
+.practice-css-square{background-color: floralwhite;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row: 2;
+  border:#240144 solid;
+  border-radius: 10px;
+}
+
+a.button{
+text-decoration: none;
+border-radius: 10px;
+background-color: rgb(33, 149, 202);
+border: none;
+color: #fff;
+text-align: center;
+font-size: 2vw;
+padding: 15px;
+width: 15vw;
+transition: all 0.5s;
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+margin-left:27%;
+box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+ a.button.html{
+  background-color:rgb(230, 75, 14);
+}
+
+a.button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+a.button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+a.button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+@media (max-width:1000px){
+  a.button{
+    margin-top:50%;
   
-  
-  .btn.left.Learn{
-    display: flex;
-    align-items: center;
-    left: 23%;
-    top: 40%;
-    width: 7em;
-    height:2em;
-    color: black;
-    font-size: 20px;
-    border-radius: 0.5em;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: sans-serif;
-    letter-spacing: 0.1em;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    margin: 1em;
-    
   }
-  a{
-  text-decoration: none}
-
-  .btn.right.Learn{
-    display: flex;
-    align-items: center;
-    left: 53%;
-    top: 40%;
-    width: 7em;
-    height:2em;
-    color: black;
-    font-size: 20px;
-    border-radius: 0.5em;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: sans-serif;
-    letter-spacing: 0.1em;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    margin: 1em;
+  h4{
+    margin-top:25%;
+    font-size: 3.5vw;
   }
- 
-  .btn.left.Practice {
-    display: flex;
-    align-items: center;
-    left: 50%;
-    top: 40%;
-    width: 7em;
-    height:2em;
-    color: black;
-    font-size: 20px;
-    border-radius: 0.5em;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: sans-serif;
-    letter-spacing: 0.1em;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    margin: 1em;
+} 
+@media(max-width:600px){
+  .big-square{
+    margin-top:27%;
   }
-  .btn.right.Practice {
-    display: flex;
-    align-items: center;
-    left: 27%;
-    top: 40%;
-    width: 7em;
-    height:2em;
-    color: black;
-    font-size: 20px;
-    border-radius: 0.5em;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: sans-serif;
-    letter-spacing: 0.1em;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    margin: 1em;
-    
+  img{margin-left: 90%;
+    width:9vw;
+    height: 9vw;
   }
-  
-  .nav {
-    position: relative;
-    background-color:blueviolet;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 45px;
-   
+  h4{
+    font-size: 5vw;
+    margin-top:30%;
   }
-  .nav a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    position: relative;
-    top: 10px;
-    display: inline-block;
-    position: relative;
-    margin-left: 10px;
+  a.button{padding: 8px;
+    width:10vw;
+    margin-left:5%;
+    margin-top:30%;
+    font-size:3vw;
+    width:23vw;
   }
-  .nav #learn_btn {
-    left: 495px;
-  }
-  .nav #home_btn {
-    left: 821px;
-  }
-  .username{
-    position:relative;
-    display:inline-block;
-    left:1230px;
-  }
-  .username .content{
-    position:absolute;
-    
-   display: none;
-   position: absolute;
-   top:2em;
-   min-width: 160px;
-   z-index: 1;
-  }
-  .username .content a{
-    position:absolute;
-  
-    background-color: blueviolet;
-     color: black;
-     padding: 12px 16px;
-     text-decoration: none;
-     display: block;
-   
-  }
-  .content a:hover {background-color: blueviolet;}
-  .username:hover .content {display: block;}
-  .username:hover a {background-color: blueviolet;}
-
-
-
- @media(max-width:1083px){
-  .split{position:absolute;
-    height: 50%;
-    width:100%;
-  }
-   .split.left{
-     top:50px;
-     
-   }
-   
-   .split.right{
-     top:50%;}
-
-   .nav{top:0%;
-      width:100%;
-      height:50px;
-      font-size: 1em;
-
-    }
-    .nav a{
-      top:1em;
-    }
-    .nav #back_btn{
-      left:0%;
-  
-    }
-    .nav #learn_btn {
-      left: 25%;
-    }
-    .nav #home_btn {
-      left: 25%;
-    }
-    .username{
-      left:25%;
-    }
-    .username.content{
-      top:1em;
-    }
-    .btn.left.Learn{
-      position: relative;
-      top:30%;
-      left:15%;
-      font-size:1em;
-    }
-    .btn.left.Practice{
-      position: relative;
-      top:30%;
-      left:43%;
-      font-size:0.8em;
-    }
-    .btn.right.Learn{
-      font-size:1em;
-      position: relative;
-      top:35%;
-      left:45%;
-    }
-    .btn.right.Practice{
-      position: relative;
-      font-size:0.8em;
-      left:23%;
-      top:30%;
-    }
-  }
- 
- 
+}

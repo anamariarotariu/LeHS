@@ -10,59 +10,69 @@ body {
     top:0;
     left: 0;
     width: 100%;
-    height: 45px;
+    height: 7vh;
+    font-size:2vw;
    
+  }
+ 
+  h3{
+    font-size: 2.5vw;
+    text-align: center;
+  }
+  
+  p{text-align: left;
+    font-size:2vw;
+    letter-spacing: 0.1em;
+    font-family: "Montserrat", sans-serif;
+  }
+  #Tags p{
+    font-size:1vw;
+  }
+  #Forms p{
+    font-size:1.5vw;
+  }
+  #Attributes p{
+    font-size:1.5vw;
   }
   .nav a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     position: relative;
-    top: 10px;
     display: inline-block;
-    position: relative;
-    margin-left: 10px;
-  }
-  .nav #learn_btn {
-    left: 495px;
-  }
-  .nav #home_btn {
-    left: 821px;
+   
+    
   }
   
+#home_btn{
+  margin-left:5vw;
+  margin-top:0;
+}
+
   .username{
     position:relative;
-    display:inline-block;
-    left:1230px;
+    margin-left: 85vw;
+    margin-top:-3.3vw;
   }
-  .username .content{
-    position:absolute;
-    
+  .username .info{
+   position:absolute;
    display: none;
-   position: absolute;
-   top:2em;
-   min-width: 160px;
-   z-index: 1;
-  }
-  .username .content a{
-    position:absolute;
+   z-index: 9;
   
-    background-color: blueviolet;
+  }
+  .username .info a{
+     background-color: blueviolet;
      color: black;
      padding: 12px 16px;
      text-decoration: none;
      display: block;
-   
+     
   }
-  .content a:hover {background-color: blueviolet;}
-  .username:hover .content {display: block;}
-  .username:hover a {background-color: blueviolet;}
-
-
+  .username:hover .info {display: block;;}
   .learn {
     float: left;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    width: 20%;
+    width: 20vw;
     height: 100%;
   }
   
@@ -78,79 +88,101 @@ body {
     text-align: left;
     cursor: pointer;
   }
-  
-  
-  .learn button:hover {
-    background-color: #ddd;
-  }
-  
-  .learn button.active {
-    background-color: #ccc;
-  }
-  
-  
+
   .content {
-    float: left;
+    float:left;
     padding: 0px 12px;
-    border: 1px solid #ccc;
     width: 70%;
     border-left: none;
     height: 100%;
     display: none;
+    
   }
-  @media (max-width:576px)
-  {.nav{
-    width:100%;
-  }
-  .nav #back_btn{
-    left:0%;
-   
-  }
-  .nav #learn_btn {
-    left: 25%;
-  }
-  .nav #home_btn {
-    left: 25%;
-  }
-  .username{
-    left:25%;
-  }
-  .learn {
-    float: left;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    width: 15%;
-    height: 100%;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
   }
   
-  
-  .learn button {
-    display: block;
-    background-color: inherit;
-    color: black;
-    padding: 12px 6px;
-    width: 7%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-  }
-  
-  
-  .learn button:hover {
+  a:hover {
     background-color: #ddd;
+    color: black;
   }
   
-  .learn button.active {
-    background-color: #ccc;
+  .learn .links{
+    font-size:1.5vw;
   }
-  
-  
-  .content {
-    float: left;
-    border: 1px solid #ccc;
-    width: 75%;
-    border-left: none;
-    display: none;
+  @media(max-width:1200px){
+    #home_btn{
+      font-size:3vw;
+      
+    }
+    .username{
+      margin-top: -5vw;
+      font-size: 3vw;
+      margin-left:80vw;
+    }
+    h3{
+      font-size:5vw;
+    }
+    .learn .links{
+      font-size:2.5vw;
+    }
+    p{
+      font-size:3vw;
+    }
+    #Tags p{
+      font-size:2vw;
+    }
+    #Forms p{
+      font-size:2vw;
+    }
+    #Attributes p{
+      font-size:2vw;
+    }
   }
+  @media(max-width:500px){
+    #home_btn{
+      font-size:3vw;
+      margin-top:2vw;
+    }
+    .username{
+      position:relative;
+      margin-left: 78vw;
+      margin-top:-8vw;
+      font-size: 3vw;
+    }
+   
+    .learn .links{
+      font-size:3.5vw;
+    }
+   h3{
+   font-size:5vw;
+ }
+    p{
+      font-size:5vw;
+    }
+    #Tags p{
+      font-size:2.5vw;
+    }
+    #Forms p{
+      font-size:3vw;
+    }
+    #Attributes p{
+      font-size:3vw;
+    }
+    
   }
+ 
+
+
+
+
+
+
+
+
+
+ 
+ 
