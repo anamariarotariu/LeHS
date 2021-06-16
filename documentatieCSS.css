@@ -10,7 +10,9 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   overflow: hidden;
+  font-family: "Lato", sans-serif;
 }
 .nav {
   position: fixed;
@@ -18,7 +20,7 @@
   height: 7%;
   background-color: var(--nav_bk);
   display: flex;
-  font-size: 40px;
+  font-size: 25px;
 }
 ul li {
   list-style: none;
@@ -29,21 +31,18 @@ a {
 .nav ul li a {
   color: var(--nav_font-color);
   top: 10px;
-  position: relative;
+  position: absolute;
 }
 .nav #home_btn {
-  position: relative;
-  left: 400px;
+  left: 20%;
 }
 .nav #login_btn {
-  position: absolute;
   right: 20%;
 }
 .nav #user_btn {
-  position: absolute;
   right: 0;
 }
-.content {
+.choose__topic--section {
   position: absolute;
   top: 7%;
   float: left;
@@ -51,27 +50,25 @@ a {
   background-color: var(--aside-bk-color);
   width: 15%;
   height: 100%;
+  font-size: 20px;
 }
-.content button {
+.choose__topic--section button {
   display: block;
   background-color: inherit;
   color: var(--font-color-aside);
-  padding: 22px 16px;
+  padding: 1em 0.75em;
   width: 100%;
   border: none;
   outline: none;
   text-align: left;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 20px;
 }
-.content button:hover {
+.choose__topic--section button:hover {
   background-color: var(--btn-hover);
 }
-.content button.active {
+.choose__topic--section button.active {
   background-color: var(--border-bk);
-}
-#title_aside {
-  font-size: 30px;
 }
 .documentation {
   float: left;
@@ -84,21 +81,18 @@ a {
   left: 15%;
   display: none;
 }
-.documentation h3,
-.documentation h4 {
+.documentation h3 {
   margin-bottom: 3em;
   text-align: center;
   letter-spacing: 0.1em;
-  font-size: 35px;
-}
-.documentation h4 {
   font-size: 30px;
 }
+
 .documentation .final_paragraph {
   text-align: center;
 }
 .documentation p {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 2em;
   margin-left: 1em;
   margin-right: 1em;
@@ -111,40 +105,63 @@ a {
   font-style: italic;
   border: none;
 }
-@media (max-width: 776px) {
-  .content {
-    float: left;
-    border: 1px solid var(--border-bk);
-    background-color: var(--aside-bk-color);
-    width: 15%;
-    height: 100%;
+.documentation a {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 20px;
+  position: absolute;
+  border-radius: 10%;
+}
+.documentation a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.next--btn {
+  background-color: var(--nav_bk);
+  color: var(--nav_font-color);
+  top: 80%;
+  right: 5%;
+}
+.previous--btn {
+  background-color: #f1f1f1;
+  color: black;
+  top: 80%;
+  left: 10%;
+}
+/* responsive design */
+@media (max-width: 885px) {
+  .choose__topic--section button {
+    font-size: 16px;
   }
-
-  .content button {
-    display: block;
-    background-color: inherit;
-    color: var(--font-color-aside);
-    padding: 12px 6px;
-    width: 7%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
+  .documentation h3 {
+    font-size: 25px;
   }
-
-  .content button:hover {
-    background-color: var(--btn-hover);
+  .documentation p {
+    font-size: 16px;
   }
-
-  .content button.active {
-    background-color: var(--border-bk);
+  .nav ul li a {
+    font-size: 20px;
   }
-
-  .documentation {
-    float: left;
-    border: 1px solid var(--border-bk);
-    width: 75%;
-    border-left: none;
-    display: none;
+}
+@media (max-width: 670px) {
+  .choose__topic--section button {
+    margin-top: 1.5em;
+    padding-left: 0;
+  }
+}
+@media (max-width: 595px) {
+  .choose__topic--section button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 466px) {
+  .nav ul li a {
+    font-size: 15px;
+  }
+  .documentation p {
+    font-size: 14px;
+  }
+  .documentation h3 {
+    font-size: 16px;
   }
 }
