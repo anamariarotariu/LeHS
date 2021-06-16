@@ -81,8 +81,7 @@ a {
   left: 15%;
   display: none;
 }
-.documentation h3,
-.documentation h4 {
+.documentation h3 {
   margin-bottom: 3em;
   text-align: center;
   letter-spacing: 0.1em;
@@ -130,42 +129,39 @@ a {
   left: 10%;
 }
 /* responsive design */
-@media (max-width: 965px) {
-}
-@media (max-width: 776px) {
-  .choose__topic--section {
-    float: left;
-    border: 1px solid var(--border-bk);
-    background-color: var(--aside-bk-color);
-    width: 15%;
-    height: 100%;
-  }
-
+@media (max-width: 885px) {
   .choose__topic--section button {
-    display: block;
-    background-color: inherit;
-    color: var(--font-color-aside);
-    padding: 12px 6px;
-    width: 7%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
+    font-size: 16px;
   }
-
-  .choose__topic--section button:hover {
-    background-color: var(--btn-hover);
+  .documentation h3 {
+    font-size: 25px;
   }
-
-  .choose__topic--section button.active {
-    background-color: var(--border-bk);
+  .documentation p {
+    font-size: 16px;
   }
-
-  .documentation {
-    float: left;
-    border: 1px solid var(--border-bk);
-    width: 75%;
-    border-left: none;
-    display: none;
+  .nav ul li a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 670px) {
+  .choose__topic--section button {
+    margin-top: 1.5em;
+    padding-left: 0;
+  }
+}
+@media (max-width: 595px) {
+  .choose__topic--section button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 466px) {
+  .nav ul li a {
+    font-size: 15px;
+  }
+  .documentation p {
+    font-size: 14px;
+  }
+  .documentation h3 {
+    font-size: 16px;
   }
 }
