@@ -6,6 +6,10 @@ const {
   getCSSQuestionById,
 } = require("./controllers/questionController");
 const server = http.createServer((req, res) => {
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "POST, GET",
+  };
   if (req.url === "/api/html-questions" && req.method === "GET") {
     getHTMLQuestions(req, res);
   } else if (req.url === "/api/css-questions" && req.method === "GET") {
@@ -22,8 +26,8 @@ const server = http.createServer((req, res) => {
   ) {
     const id = req.url.split("/")[3];
     getCSSQuestionById(req, res, id);
-  } else if (req.url === "/api/questions" && req.method === "POST") {
-    createQuestion(req, res);
+  } else if (req.url === "/api/html-questions/add" && req.method === "POST") {
+    console.log("insert statament is done");
   } else {
     res.writeHead(404, { "Content-Type": "application/json" });
     res.end(JSON.stringify({ message: "Route not found" }));

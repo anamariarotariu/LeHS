@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-// initializing variables
+ //initializing variables
 $username = "";
 $email    = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost','root','','registration');
+$db = mysqli_connect('localhost','root','password','registration') or die("Cannot connect to server");
+
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {

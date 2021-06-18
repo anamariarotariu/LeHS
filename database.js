@@ -67,6 +67,32 @@ let getCSSQuestionById = (nivel_dificultate) => {
     });
   });
 };
+//function for inserting in db a HTML question
+let insertHTMLQuestion = (
+  id,
+  question,
+  choice1,
+  choice2,
+  choice3,
+  answer,
+  nivel_dificultate
+) => {
+  const sqlQuery =
+    "INSERT INTO questionshtmlro (id, question, choice1, choice2, choice3, answer, nivel_dificultate) VALUES (?,?,?,?,?,?,?)";
+  return new Promise((resolve, reject) => {
+    pool.query(
+      sqlQuery,
+      [id, question, choice1, choice2, choice3, answer, nivel_dificultate],
+      (error, newQuestion) => {
+        if (error) {
+          return reject(error);
+        }
+        return resolve(newQuestion);
+      }
+    );
+  });
+};
+//function for inserting in db a CSS question
 
 module.exports = {
   createTables,
@@ -74,4 +100,5 @@ module.exports = {
   getHTMLQuestionById,
   getAllCSSQuestions,
   getCSSQuestionById,
+  insertHTMLQuestion,
 };

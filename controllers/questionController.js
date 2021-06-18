@@ -1,20 +1,28 @@
 const Question = require("../models/questionModel");
-//@desc gets all question
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, GET",
+};
+//@desc gets all HTML question
 //@route GET /api/html-questions
 async function getHTMLQuestions(req, res) {
   try {
     const questions = await Question.findAllHtml();
-    res.writeHead(200, { "Content-Type": "application/json" });
+    //res.writeHead(200, { "Content-Type": "application/json" });
+    res.writeHead(200, headers);
     res.write(JSON.stringify(questions));
     res.end();
   } catch (error) {
     console.log(error);
   }
 }
+//@desc get all CSS questions
+//@route GET /api/css-questions
 async function getCSSQuestions(req, res) {
   try {
     const cssQuestions = await Question.findAllCss();
-    res.writeHead(200, { "Content-Type": "application/json" });
+    // res.writeHead(200, { "Content-Type": "application/json" });
+    res.writeHead(200, headers);
     res.write(JSON.stringify(cssQuestions));
     res.end();
   } catch (error) {
@@ -30,7 +38,8 @@ async function getHTMLQuestionById(req, res, id) {
       res.writeHead(404, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ message: "Question not found" }));
     } else {
-      res.writeHead(200, { "Content-Type": "application/json" });
+      //res.writeHead(200, { "Content-Type": "application/json" });
+      res.writeHead(200, headers);
       res.end(JSON.stringify(question));
     }
   } catch (error) {
@@ -46,7 +55,8 @@ async function getCSSQuestionById(req, res, id) {
       res.writeHead(404, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ message: "Question not found" }));
     } else {
-      res.writeHead(200, { "Content-Type": "application/json" });
+      //res.writeHead(200, { "Content-Type": "application/json" });
+      res.writeHead(200, headers);
       res.end(JSON.stringify(cssQuestion));
     }
   } catch (error) {
