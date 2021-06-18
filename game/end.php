@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +13,10 @@
             <h1 id="final--score"></h1>
             <form>
                 <input type="text" name="username" id="username--input" placeholder="username">
-                <button type="submit" class="btn" id="save__score--btn" onclick="saveHighscore(event)" disabled>Save</button>
+                <button type="submit" class="btn" id="save__score--btn" onclick="saveHighscore(event)" disabled>Salveaza</button>
             </form>
-            <a href="game.html" class="btn">Play Again</a>
-            <a href="/firstpage.html " class="btn"> Go Home</a>
+            <a href="game.php" class="btn">Play Again</a>
+            <a href="/Intermediate/firstpage.php " class="btn"> Acasa</a>
         </div>
     </div>
     <script src="end.js"></script>

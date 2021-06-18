@@ -1,5 +1,19 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: /Intermediate/login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: /Intermediate/login.php");
+  }
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +22,12 @@
     <title>Game</title>
 </head>
 <body>
+     
+      <p> <a href="game.php?logout='1'">Logout</a> </p>
+   
+
+
+
     <div class="container">
         <div id="loader"></div>
             <div id="game" class="justify-center flex-column hidden">
@@ -59,7 +79,7 @@
            <div class="btn">
             <div class="btn-back">
               <p>Are you sure you want to do that?</p>
-              <a href="end.html" class="yes">Yes</a>
+              <a href="end.php" class="yes">Yes</a>
               <button class="no">No</button>
             </div>
             <div class="btn-front">Quit</div>

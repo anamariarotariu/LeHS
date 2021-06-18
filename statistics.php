@@ -1,5 +1,20 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: /Intermediate/login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: /Intermediate/login.php");
+  }
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +25,12 @@
     <title>Statistics</title>
 </head>
 <body>
-    <nav class="nav">
+<nav class="nav">
         <ul>
             <li>
-                <a href="learn.html" class=" nav--btns learn--btn"> Învață</a>
-                <a href="firstpage.html" class=" nav--btns home--btn">Acasă</a>
-                <a href="userPofile.css" class="nav--btns user--btn"> Username</a>
+               
+                <a href="learnHTML.html" class=" nav--btns home--btn">Inapoi</a>
+                <a href="userProfile.php" class="nav--btns user--btn"> Username</a>
             </li>
         </ul>
     </nav>
