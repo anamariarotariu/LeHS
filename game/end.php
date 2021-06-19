@@ -16,7 +16,7 @@
                 <button type="submit" class="btn" id="save__score--btn" onclick="saveHighscore(event)" disabled>Salveaza</button>
             </form>
             <a href="game.php" class="btn">Play Again</a>
-            <a href="/Intermediate/firstpage.php " class="btn"> Acasa</a>
+            <a href="/lehs/firstpage.php " class="btn"> Acasa</a>
         </div>
     </div>
     <script src="end.js"></script>

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
  //initializing variables
 $username = "";
@@ -7,7 +7,8 @@ $email    = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost','root','password','registration') or die("Cannot connect to server");
+//la mine nu e parolat asta de asta am sters password
+$db = mysqli_connect('localhost','root','','registration');
 
 
 // REGISTER USER
