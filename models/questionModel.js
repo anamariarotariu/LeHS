@@ -19,8 +19,9 @@ function findCssById(id) {
   questions.createTables();
   return questions.getCSSQuestionById(id);
 }
+
 //function for inserting a HTML question in db
-function insertHTMLQuestion(
+function insertHtmlQuestion(
   id,
   question,
   choice1,
@@ -30,7 +31,7 @@ function insertHTMLQuestion(
   nivel_dificultate
 ) {
   questions.createTables();
-  return questions.insertHTMLQuestion(
+  return questions.insertHtmlQuestion(
     id,
     question,
     choice1,
@@ -45,5 +46,5 @@ module.exports = {
   findAllCss,
   findHtmlById,
   findCssById,
-  insertHTMLQuestion,
+  insertHtmlQuestion
 };

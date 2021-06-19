@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include('server.php');
 
@@ -26,10 +26,13 @@ include('server.php');
 
   <div class="page">
 
-<<<<<<< Updated upstream
+
     <div class="image">
-      <img src="./images/login.png" alt="loginImage" id="background_container--img">
+      <img src="./images/login.png" alt="loginImage" id="background_container--img"></a>
     </div>
+
+
+
 
 
     <div class="login">
@@ -48,44 +51,16 @@ include('server.php');
         </div>
 
         <p> Sau poti folosi</p>
-        <img src="./images/gitHub.png" id="github_alt" class="alternatives_login" alt="githubLogo">
+        <a href="https://github.com/login/oauth/authorize?client_id=0d14309be059b9ea254d"><img src="./images/gitHub.png" id="github_alt" class="alternatives_login" alt="githubLogo"></a>
         <p>Daca nu ai un cont </p>
         <a href="register.php" class="reglink">Inregistreaza-te</a>
-=======
-   <div class="image">
-   <img src="./images/login.png" alt="loginImage" id="background_container--img"></a>
-   </div>
-
-
-
-
-
-<div class="login">
-  <form method="post" action="login.php">
-  	<?php include('errors.php'); ?>
-  	<div class="input-group">
-  		<label>Nume utilizator</label>
-  		<input type="text" name="username" >
-  	</div>
-  	<div class="input-group">
-  		<label>Parola</label>
-  		<input type="password" name="password">
-  	</div>
-  	<div class="input-group">
-  		<button type="submit" class="btn" name="login_user">Logheaza-te</button>
-  	</div>
-
-      <p> Sau poti folosi</p>
-      <a href="https://github.com/login/oauth/authorize?client_id=0d14309be059b9ea254d"><img src="./images/gitHub.png" id="github_alt" class="alternatives_login" alt="githubLogo"></a>
-     <p>Daca nu ai un cont </p>
-  		<a href="register.php" class="reglink">Inregistreaza-te</a>
-  	 
-  </form>
-</div>
->>>>>>> Stashed changes
 
       </form>
     </div>
+
+
+    </form>
+  </div>
 
   </div>
 </body>

@@ -3,6 +3,7 @@ const headers = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "POST, GET",
 };
+
 //@desc gets all HTML question
 //@route GET /api/html-questions
 async function getHTMLQuestions(req, res) {
@@ -63,10 +64,44 @@ async function getCSSQuestionById(req, res, id) {
     console.log(error);
   }
 }
-
+//@desc post a new HTML question in db
+//@route POST /api/html-question/add
+async function insertHTMLQuestion(
+  req,
+  res,
+  id,
+  question,
+  choice1,
+  choice2,
+  choice3,
+  answer,
+  nivel_dificultate
+) {
+  try {
+    newQuestion = await Question.insertHtmlQuestion(
+      id,
+      question,
+      choice1,
+      choice2,
+      choice3,
+      answer,
+      nivel_dificultate
+    );
+    if (!newQuestion) {
+      res.writeHead(409, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ message: "Question was not added in db" }));
+    } else {
+      res.writeHead(201, { "Content-Type": "application/json" });
+      res.end(JSON.stringify(newQuestion));
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
 module.exports = {
   getHTMLQuestions,
   getCSSQuestions,
   getCSSQuestionById,
   getHTMLQuestionById,
+  insertHTMLQuestion
 };

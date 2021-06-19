@@ -4,6 +4,7 @@ const {
   getHTMLQuestionById,
   getCSSQuestions,
   getCSSQuestionById,
+  insertHTMLQuestion,
 } = require("./controllers/questionController");
 const server = http.createServer((req, res) => {
   const headers = {
@@ -27,7 +28,30 @@ const server = http.createServer((req, res) => {
     const id = req.url.split("/")[3];
     getCSSQuestionById(req, res, id);
   } else if (req.url === "/api/html-questions/add" && req.method === "POST") {
-    console.log("insert statament is done");
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+    req.on("end", () => {
+      const result = JSON.parse(body);
+      console.log(result.id);
+      console.log(result.question);
+      console.log(result.choice1);
+      console.log(result.choice2);
+      console.log(result.choice3);
+      console.log(result.answer);
+      console.log(result.nivel_dificultate);
+      console.log("SERVER OUT");
+      insertHTMLQuestion(
+        result.id,
+        result.question,
+        result.choice1,
+        result.choice2,
+        result.choice3,
+        result.answer,
+        result.nivel_dificultate
+      );
+    });
   } else {
     res.writeHead(404, { "Content-Type": "application/json" });
     res.end(JSON.stringify({ message: "Route not found" }));
