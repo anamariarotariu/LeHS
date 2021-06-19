@@ -29,7 +29,7 @@
         <ul>
             <li>
                
-                <a href="learnHTML.html" class=" nav--btns home--btn">Inapoi</a>
+                <a href="learnHTML.php" class=" nav--btns home--btn">Inapoi</a>
                 <a href="userProfile.php" class="nav--btns user--btn"> Username</a>
             </li>
         </ul>

@@ -1,8 +1,8 @@
 window.onload = function () {
   "use strict";
 
-  flipCover("Hint", {
-    url: "/lehs/firstpage.php",
+  flipCover("hint", {
+    url: "#",
     text: "",
     width: "5vw",
   });

@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+if (isset($_GET['logout'])) {
+  session_destroy();
+  unset($_SESSION['username']);
+  header("location: /LeHS/login.php");
+
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ro">
   <head>
@@ -11,7 +24,14 @@
     <nav class="nav">
       <a href="firstpage.php" id="home_btn"> Acasa</a>
       <div class="username">
-        <a href="#">Utilizator</a>
+        <?php 
+         if(isset($_SESSION['username'])):
+            echo $_SESSION['username']; 
+         else:
+          echo 'Utilizator';
+         endif;
+
+         ?> 
         <div class="info">
           <a href="userProfile.php">Profil</a>
           <a href="statistics.php">Statistici</a>

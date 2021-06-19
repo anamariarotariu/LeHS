@@ -128,6 +128,7 @@ a {
   top: 80%;
   left: 10%;
 }
+
 /* responsive design */
 @media (max-width: 885px) {
   .choose__topic--section button {
