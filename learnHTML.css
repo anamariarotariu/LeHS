@@ -1,188 +1,168 @@
 body {
-    font-family: "Roboto", sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-  }
-  .nav {
-    position: relative;
-    background-color:blueviolet;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 7vh;
-    font-size:2vw;
-   
-  }
- 
-  h3{
-    font-size: 2.5vw;
-    text-align: center;
-  }
-  
-  p{text-align: left;
-    font-size:2vw;
-    letter-spacing: 0.1em;
-    font-family: "Montserrat", sans-serif;
-  }
-  #Tags p{
-    font-size:1vw;
-  }
-  #Forms p{
-    font-size:1.5vw;
-  }
-  #Attributes p{
-    font-size:1.5vw;
-  }
-  .nav a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    position: relative;
-    display: inline-block;
-   
-    
-  }
-  
-#home_btn{
-  margin-left:5vw;
-  margin-top:0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.nav {
+  position: relative;
+  background-color: blueviolet;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7vh;
+  font-size: 2vw;
+}
+h3 {
+  font-size: 2.5vw;
+  text-align: center;
 }
 
-  .username{
-    position:relative;
-    margin-left: 85vw;
-    margin-top:-3.3vw;
+p {
+  text-align: left;
+  font-size: 2vw;
+  letter-spacing: 0.1em;
+  font-family: "Montserrat", sans-serif;
+}
+#Tags p {
+  font-size: 1vw;
+}
+#Forms p {
+  font-size: 1.5vw;
+}
+#Attributes p {
+  font-size: 1.5vw;
+}
+.nav a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+#home_btn {
+  margin-left: 5vw;
+  margin-top: 0;
+}
+
+.username {
+  position: relative;
+  margin-left: 85vw;
+  margin-top: -3.3vw;
+}
+.username .info {
+  position: absolute;
+  display: none;
+  z-index: 9;
+}
+.username .info a {
+  background-color: blueviolet;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.username:hover .info {
+  display: block;
+}
+.learn {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 20vw;
+  height: 100%;
+}
+
+.learn button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.content {
+  float: left;
+  padding: 0px 12px;
+  width: 70%;
+  border-left: none;
+  height: 100%;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.learn .links {
+  font-size: 1.5vw;
+}
+@media (max-width: 1200px) {
+  #home_btn {
+    font-size: 3vw;
   }
-  .username .info{
-   position:absolute;
-   display: none;
-   z-index: 9;
-  
+  .username {
+    margin-top: -5vw;
+    font-size: 3vw;
+    margin-left: 80vw;
   }
-  .username .info a{
-     background-color: blueviolet;
-     color: black;
-     padding: 12px 16px;
-     text-decoration: none;
-     display: block;
-     
+  h3 {
+    font-size: 5vw;
   }
-  .username:hover .info {display: block;;}
-  .learn {
-    float: left;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    width: 20vw;
-    height: 100%;
+  .learn .links {
+    font-size: 2.5vw;
   }
-  
-  
-  .learn button {
-    display: block;
-    background-color: inherit;
-    color: black;
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
+  p {
+    font-size: 3vw;
+  }
+  #Tags p {
+    font-size: 2vw;
+  }
+  #Forms p {
+    font-size: 2vw;
+  }
+  #Attributes p {
+    font-size: 2vw;
+  }
+}
+@media (max-width: 500px) {
+  #home_btn {
+    font-size: 3vw;
+    margin-top: 2vw;
+  }
+  .username {
+    position: relative;
+    margin-left: 78vw;
+    margin-top: -8vw;
+    font-size: 3vw;
   }
 
-  .content {
-    float:left;
-    padding: 0px 12px;
-    width: 70%;
-    border-left: none;
-    height: 100%;
-    display: none;
-    
+  .learn .links {
+    font-size: 3.5vw;
   }
-
-  a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
+  h3 {
+    font-size: 5vw;
   }
-  
-  a:hover {
-    background-color: #ddd;
-    color: black;
+  p {
+    font-size: 5vw;
   }
-  
-  .learn .links{
-    font-size:1.5vw;
+  #Tags p {
+    font-size: 2.5vw;
   }
-  @media(max-width:1200px){
-    #home_btn{
-      font-size:3vw;
-      
-    }
-    .username{
-      margin-top: -5vw;
-      font-size: 3vw;
-      margin-left:80vw;
-    }
-    h3{
-      font-size:5vw;
-    }
-    .learn .links{
-      font-size:2.5vw;
-    }
-    p{
-      font-size:3vw;
-    }
-    #Tags p{
-      font-size:2vw;
-    }
-    #Forms p{
-      font-size:2vw;
-    }
-    #Attributes p{
-      font-size:2vw;
-    }
+  #Forms p {
+    font-size: 3vw;
   }
-  @media(max-width:500px){
-    #home_btn{
-      font-size:3vw;
-      margin-top:2vw;
-    }
-    .username{
-      position:relative;
-      margin-left: 78vw;
-      margin-top:-8vw;
-      font-size: 3vw;
-    }
-   
-    .learn .links{
-      font-size:3.5vw;
-    }
-   h3{
-   font-size:5vw;
- }
-    p{
-      font-size:5vw;
-    }
-    #Tags p{
-      font-size:2.5vw;
-    }
-    #Forms p{
-      font-size:3vw;
-    }
-    #Attributes p{
-      font-size:3vw;
-    }
-    
+  #Attributes p {
+    font-size: 3vw;
   }
- 
-
-
-
-
-
-
-
-
-
- 
- 
+}
