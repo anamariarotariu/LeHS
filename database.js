@@ -67,8 +67,8 @@ let getCSSQuestionById = (nivel_dificultate) => {
     });
   });
 };
-//function for inserting in db a HTML question
-let insertHTMLQuestion = (
+//function for inserting a HTML question in db
+let insertHtmlQuestion = (
   id,
   question,
   choice1,
@@ -92,13 +92,115 @@ let insertHTMLQuestion = (
     );
   });
 };
-//function for inserting in db a CSS question
-
+//function for inserting a CSS question in db
+let insertCssQuestion = (
+  id,
+  question,
+  choice1,
+  choice2,
+  choice3,
+  answer,
+  nivel_dificultate
+) => {
+  const sqlQuery =
+    "INSERT INTO questionscssro (id, question, choice1, choice2, choice3, answer, nivel_dificultate) VALUES (?,?,?,?,?,?,?)";
+  return new Promise((resolve, reject) => {
+    pool.query(
+      sqlQuery,
+      [id, question, choice1, choice2, choice3, answer, nivel_dificultate],
+      (error, newQuestion) => {
+        if (error) {
+          return reject(error);
+        }
+        return resolve(newQuestion);
+      }
+    );
+  });
+};
+//function for deleting a HTML question
+let deleteHtmlQuestion = (id) => {
+  const sqlQuery = "DELETE FROM questionshtmlro WHERE id = ?";
+  return new Promise((resolve, reject) => {
+    pool.query(sqlQuery, [id], (error, deletedQuestion) => {
+      if (error) {
+        return reject(error);
+      }
+      return resolve(deletedQuestion);
+    });
+  });
+};
+//function for deleting a CSS question
+let deleteCssQuestion = (id) => {
+  const sqlQuery = "DELETE FROM questionscssro WHERE id = ?";
+  return new Promise((resolve, reject) => {
+    pool.query(sqlQuery, [id], (error, deletedQuestion) => {
+      if (error) {
+        return reject(error);
+      }
+      return resolve(deletedQuestion);
+    });
+  });
+};
+//function for updating a HTML question
+let updateHtmlQuestion = (
+  id,
+  question,
+  choice1,
+  choice2,
+  choice3,
+  answer,
+  nivel_dificultate
+) => {
+  const sqlQuery =
+    "UPDATE questionshtmlro SET id = ?, question = ? , choice1 = ? , choice2 = ?, choice3 = ?, answer = ?, nivel_dificultate =? ";
+  return new Promise((resolve, reject) => {
+    pool.query(
+      sqlQuery,
+      [id, question, choice1, choice2, choice3, answer, nivel_dificultate],
+      (error, updatedQuestion) => {
+        if (error) {
+          return reject(error);
+        }
+        return resolve(updatedQuestion);
+      }
+    );
+  });
+};
+//function for updating a CSS question
+let updateCssQuestion = (
+  id,
+  question,
+  choice1,
+  choice2,
+  choice3,
+  answer,
+  nivel_dificultate
+) => {
+  const sqlQuery =
+    "UPDATE questioncssro SET id = ?, question = ? , choice1 = ? , choice2 = ?, choice3 = ?, answer = ?, nivel_dificultate =? ";
+  return new Promise((resolve, reject) => {
+    pool.query(
+      sqlQuery,
+      [id, question, choice1, choice2, choice3, answer, nivel_dificultate],
+      (error, updatedQuestion) => {
+        if (error) {
+          return reject(error);
+        }
+        return resolve(updatedQuestion);
+      }
+    );
+  });
+};
 module.exports = {
   createTables,
   getAllHTMLQuestions,
   getHTMLQuestionById,
   getAllCSSQuestions,
   getCSSQuestionById,
-  insertHTMLQuestion,
+  insertHtmlQuestion,
+  insertCssQuestion,
+  deleteHtmlQuestion,
+  deleteCssQuestion,
+  updateHtmlQuestion,
+  updateCssQuestion,
 };
