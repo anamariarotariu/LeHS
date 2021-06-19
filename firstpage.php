@@ -11,19 +11,6 @@
 </head>
 <body >
 
-<!-- <nav class="nav">
-    <div class= "username">
-        <a href="#">Utilizator</a>
-        <div class="info">
-            <a href="userProfile.php">Profil</a>
-            <a href="statistics.php">Statistici</a>
-            <a href="login.php">Logheaza-te</a>
-            <a href="game/highscore.html">Clasament</a>
-        </div>
-
-      </div>
-</nav> -->
-
 
 
     <div class="LoginPage">
@@ -33,11 +20,11 @@
         
         <div class="learn-html-square">
             <h4>HTML</h4>
-            <a href="learnHTML.html" class="button html" >INVATA</a>
+            <a href="learnHTML.php" class="button html" >INVATA</a>
         </div>
         <div class="learn-css-square">
             <h4>CSS</h4>
-           <a href="documentatieCSS.html" class="button">INVATA</a>
+           <a href="documentatieCSS.php" class="button">INVATA</a>
         </div>
   
     

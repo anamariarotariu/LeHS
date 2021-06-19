@@ -1,22 +1,18 @@
 <?php
+
 session_start();
 
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
-<<<<<<< Updated upstream
     header('location: /LeHS/login.php');
-=======
-    header('location: /lehs/login.php');
->>>>>>> Stashed changes
 }
+
+
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
-<<<<<<< Updated upstream
+    
     header("location: /LeHS/login.php");
-=======
-    header("location: /lehs/login.php");
->>>>>>> Stashed changes
 }
 ?>
 
@@ -33,9 +29,9 @@ if (isset($_GET['logout'])) {
 
 <body>
 
-    <p> <a href="game.php?logout='1'">Logout</a> </p>
+    
 
-
+<p> <a href="game.php?logout='1'">Logout</a> </p>
 
 
     <div class="container">
@@ -84,7 +80,7 @@ if (isset($_GET['logout'])) {
 
 
         <div class="flip-cover-hint"></div>
-
+       
 
         <div class="btn">
             <div class="btn-back">

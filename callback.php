@@ -3,7 +3,7 @@
     $code=$_GET['code'];
    
     if ($code=="")
-    { header('Location:http://localhost/lehs/login.php');
+    { header('Location:http://localhost:3000/LeHS/login.php');
      exit;
     }
     $CLIENT_ID="0d14309be059b9ea254d";
@@ -30,10 +30,9 @@
     if($data['access_token']!=""){
         session_start();
         $_SESSION['accessToken']=$data['access_token'];
-        header('Location:http://localhost/lehs/firstpage.php');
+        header('Location:http://localhost:3000/LeHS/firstpage.php');
         exit;
     }
- 
 
 ?>
 
