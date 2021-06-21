@@ -1,12 +1,11 @@
 const db = require("mysql");
-const { writeDataToFile } = require("./utils");
 //variables for validating if we should write in questions.json, one for writing html questions and one for css
 let ok1 = true;
 let ok2 = true;
 const pool = db.createPool({
   connectionLimit: 10,
-  password: "",
-  user: "root",
+  password: "twdb",
+  user: "tw",
   database: "tw",
   host: "localhost",
 });
@@ -32,11 +31,6 @@ let getAllHTMLQuestions = () => {
       if (error) {
         return reject(error);
       }
-      if (ok1 === true) {
-        writeDataToFile("questions.json", questions);
-        ok1 = false;
-      }
-
       return resolve(questions);
     });
   });
@@ -47,13 +41,6 @@ let getAllCSSQuestions = () => {
     pool.query("SELECT * FROM questionscssro", (error, cssQuestions) => {
       if (error) {
         return reject(error);
-      }
-      console.log("ok2 is: " + ok2);
-      if (ok2 === true) {
-        console.log("i am writing in file");
-        writeDataToFile("questions.json", cssQuestions);
-        ok2 = false;
-        console.log("ok2 is " + ok2 + " now");
       }
       return resolve(cssQuestions);
     });
