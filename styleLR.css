@@ -54,14 +54,10 @@ p {
 }
 .login {
   width: 30%;
-  margin-top: 20%;
+  margin-top: 5%;
   margin-left: 10%;
 }
-.register{
-  width: 30%;
-  margin-top: 10%;
-  margin-left: 10%;
-}
+
 form,
 .content {
   margin: 0px auto;
@@ -88,7 +84,6 @@ form,
 }
 .btn {
   margin-left: 35%;
-
   padding: 10px;
   font-size: 15px;
   color: white;
