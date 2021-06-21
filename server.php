@@ -10,7 +10,7 @@ $errors = array();
 
 // connect to the database
 //la mine nu e parolat asta de asta am sters password
-$db = mysqli_connect('localhost','root','','registration');
+$db = mysqli_connect('localhost','root','password','registration');
 
 
 // REGISTER USER
@@ -92,5 +92,3 @@ if (isset($_POST['login_user'])) {
         }
     }
   }
-  
-  ?>

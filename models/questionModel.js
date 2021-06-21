@@ -20,7 +20,7 @@ function findCssById(id) {
   return questions.getCSSQuestionById(id);
 }
 //function for inserting a HTML question in db
-function insertHTMLQuestion(
+function insertHtmlQuestion(
   id,
   question,
   choice1,
@@ -30,7 +30,7 @@ function insertHTMLQuestion(
   nivel_dificultate
 ) {
   questions.createTables();
-  return questions.insertHTMLQuestion(
+  return questions.insertHtmlQuestion(
     id,
     question,
     choice1,
@@ -40,10 +40,46 @@ function insertHTMLQuestion(
     nivel_dificultate
   );
 }
+//function for inserting a CSS question in db
+function insertCssQuestion(
+  id,
+  question,
+  choice1,
+  choice2,
+  choice3,
+  answer,
+  nivel_dificultate
+) {
+  questions.createTables();
+  return questions.insertCssQuestion(
+    id,
+    question,
+    choice1,
+    choice2,
+    choice3,
+    answer,
+    nivel_dificultate
+  );
+}
+//function for deleting a HTML question from db
+function deleteHtmlQuestion(id) {
+  questions.createTables();
+  return questions.deleteHtmlQuestion(id);
+}
+//function for deleting a CSS question from db
+function deleteCssQuestion(id) {
+  questions.createTables();
+  return questions.deleteCssQuestion(id);
+}
+//function for updating a HTML question
+
 module.exports = {
   findAllHtml,
   findAllCss,
   findHtmlById,
   findCssById,
-  insertHTMLQuestion,
+  insertHtmlQuestion,
+  insertCssQuestion,
+  deleteHtmlQuestion,
+  deleteCssQuestion,
 };
