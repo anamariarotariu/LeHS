@@ -11,10 +11,60 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
 let questions = [];
-
-
-function showHtmlQuestions() {
-  fetch("http://localhost:5000/api/html-questions/")
+let htmlLevel1 = document.getElementById("html1");
+let htmlLevel2 = document.getElementById("html2");
+let htmlLevel3 = document.getElementById("html3");
+if (document.cookie.split(" ")[1].split("=")[1] == 120) {
+  showHTML1();
+}
+if (document.cookie.split(" ")[1].split("=")[1] == 121) {
+  showHTML2();
+}
+if (document.cookie.split(" ")[1].split("=")[1] == 122) {
+  showHTML3();
+}
+if (document.cookie.split(" ")[1].split("=")[1] == 5) {
+  showCSS1();
+}
+if (document.cookie.split(" ")[1].split("=")[1] == 6) {
+  showCSS2();
+}
+if (document.cookie.split(" ")[1].split("=")[1] == 7) {
+  showCSS3();
+}
+function showHTML1() {
+  console.log("test");
+  fetch("http://localhost:5000/api/html-questions/1")
+    .then((res) => {
+      console.log("i am fetching api");
+      return res.json();
+    })
+    .then((loadedQuestion) => {
+      questions = loadedQuestion.map((loadedQuestion) => {
+        const formattedQuestion = {
+          question: loadedQuestion.question,
+        };
+        const answerChoices = [loadedQuestion.choice1, loadedQuestion.choice2];
+        //place the answer in a random position
+        formattedQuestion.answer = Math.floor(Math.random() * 2) + 1;
+        answerChoices.splice(
+          formattedQuestion.answer - 1,
+          0,
+          loadedQuestion.answer
+        );
+        answerChoices.forEach((choice, index) => {
+          formattedQuestion["choice" + (index + 1)] = choice;
+        });
+        return formattedQuestion;
+      });
+      startGame();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+function showHTML2() {
+  fetch("http://localhost:5000/api/html-questions/2")
     .then((res) => {
       return res.json();
     })
@@ -42,9 +92,97 @@ function showHtmlQuestions() {
       console.log(error);
     });
 }
-showHtmlQuestions();
-function showCssQuestions() {
-  fetch("http://localhost:5000/api/css-questions")
+function showHTML3() {
+  fetch("http://localhost:5000/api/html-questions/3")
+    .then((res) => {
+      return res.json();
+    })
+    .then((loadedQuestion) => {
+      questions = loadedQuestion.map((loadedQuestion) => {
+        const formattedQuestion = {
+          question: loadedQuestion.question,
+        };
+        const answerChoices = [loadedQuestion.choice1, loadedQuestion.choice2];
+        //place the answer in a random position
+        formattedQuestion.answer = Math.floor(Math.random() * 2) + 1;
+        answerChoices.splice(
+          formattedQuestion.answer - 1,
+          0,
+          loadedQuestion.answer
+        );
+        answerChoices.forEach((choice, index) => {
+          formattedQuestion["choice" + (index + 1)] = choice;
+        });
+        return formattedQuestion;
+      });
+      startGame();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+function showCSS1() {
+  fetch("http://localhost:5000/api/css-questions/1")
+    .then((res) => {
+      return res.json();
+    })
+    .then((loadedQuestion) => {
+      questions = loadedQuestion.map((loadedQuestion) => {
+        const formattedQuestion = {
+          question: loadedQuestion.question,
+        };
+        const answerChoices = [loadedQuestion.choice1, loadedQuestion.choice2];
+        //place the answer in a random position
+        formattedQuestion.answer = Math.floor(Math.random() * 3 + 1);
+        answerChoices.splice(
+          formattedQuestion.answer - 1,
+          0,
+          loadedQuestion.answer
+        );
+        answerChoices.forEach((choice, index) => {
+          formattedQuestion["choice" + (index + 1)] = choice;
+        });
+
+        return formattedQuestion;
+      });
+      startGame();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+function showCSS2() {
+  fetch("http://localhost:5000/api/css-questions/2")
+    .then((res) => {
+      return res.json();
+    })
+    .then((loadedQuestion) => {
+      questions = loadedQuestion.map((loadedQuestion) => {
+        const formattedQuestion = {
+          question: loadedQuestion.question,
+        };
+        const answerChoices = [loadedQuestion.choice1, loadedQuestion.choice2];
+        //place the answer in a random position
+        formattedQuestion.answer = Math.floor(Math.random() * 3 + 1);
+        answerChoices.splice(
+          formattedQuestion.answer - 1,
+          0,
+          loadedQuestion.answer
+        );
+        answerChoices.forEach((choice, index) => {
+          formattedQuestion["choice" + (index + 1)] = choice;
+        });
+
+        return formattedQuestion;
+      });
+      startGame();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+function showCSS3() {
+  fetch("http://localhost:5000/api/css-questions/3")
     .then((res) => {
       return res.json();
     })
