@@ -2,7 +2,7 @@ window.onload = function () {
   "use strict";
 
   flipCover("hint", {
-    url: "#",
+    url: "http://localhost:3000/LeHS/firstpage.php",
     text: "",
     width: "5vw",
   });

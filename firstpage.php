@@ -31,12 +31,12 @@
   
         <div class="practice-html-square">
             <h4>HTML</h4>
-            <a href="http://localhost:3000/LeHS/game/game.php" class="button html" > EXERSEAZA </a>
+            <a href="http://localhost:3000/LeHS/chooseHTMLLevel.php" class="button html" > EXERSEAZA </a>
         </div>
        
         <div class="practice-css-square">
             <h4>CSS</h4>
-           <a href="http://localhost:3000/LeHS/game/game.php" class="button">EXERSEAZA</a>
+           <a href="http://localhost:3000/LeHS/chooseCSS.php" class="button">EXERSEAZA</a>
         </div>
     
      </div>

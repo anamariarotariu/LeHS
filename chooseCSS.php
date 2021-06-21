@@ -9,7 +9,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="chooseLevels.css">
-    <title>Choose HTML Level</title>
+    <title>Choose CSS Level</title>
 </head>
 
 <body>
@@ -26,24 +26,23 @@ session_start();
          ?> 
       </div>
     </nav>
+
+
     <main>
     <div class="main__content">
-             <div >
-             <button type="submit" class="btn" onclick="showHTML1(event)" disabled>1</button>
+       <div >
+             <button type="submit" class="btn" onclick="showCSS1(event)" disabled>1</button>
        </div>  
        
              <div >
-             <button type="submit" class="btn" onclick="showHTML2(event)" disabled>2</button>
+             <button type="submit" class="btn" onclick="showCSS2(event)" disabled>2</button>
        </div>  
       
              <div>
-             <button type="submit" class="btn" onclick="showHTML3(event)" disabled>3</button>
+             <button type="submit" class="btn" onclick="showCSS3(event)" disabled>3</button>
        </div>  
-
-
-
-
         </div>
+
     </main>
 </body>
 

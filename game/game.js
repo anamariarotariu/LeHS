@@ -11,9 +11,10 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
 let questions = [];
-let url = "http://localhost:5000/api/html-questions";
+
+
 function showHtmlQuestions() {
-  fetch(url)
+  fetch("http://localhost:5000/api/html-questions/")
     .then((res) => {
       return res.json();
     })
