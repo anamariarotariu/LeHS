@@ -3,12 +3,12 @@
 
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: /lehs/login.php');
+  	header('location: http://localhost:3000/LeHS/login.php');
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
   	unset($_SESSION['username']);
-  	header("location: /lehs/login.php");
+  	header("location: http://localhost:3000/LeHS/login.php");
   }
 ?>
 
@@ -29,8 +29,15 @@
         <ul>
             <li>
                
-                <a href="learnHTML.php" class=" nav--btns home--btn">Inapoi</a>
-                <a href="userProfile.php" class="nav--btns user--btn"> Username</a>
+                <a href="http://localhost:3000/LeHS/learnHTML.php" class=" nav--btns home--btn">Inapoi</a>
+                <a href="http://localhost:3000/LeHS/userProfile.php" class="nav--btns user--btn">  <?php 
+         if(isset($_SESSION['username'])):
+            echo $_SESSION['username']; 
+         else:
+          echo 'Utilizator';
+         endif;
+
+         ?> </a>
             </li>
         </ul>
     </nav>

@@ -33,10 +33,10 @@ if (isset($_GET['logout'])) {
 
          ?> 
         <div class="info">
-          <a href="userProfile.php">Profil</a>
-          <a href="statistics.php">Statistici</a>
-          <a href="login.php">Logheaza-te</a>
-          <a href="game/highscore.html">Clasament</a>
+          <a href="http://localhost:3000/LeHS/userProfile.php">Profil</a>
+          <a href="http://localhost:3000/LeHS/statistics.php">Statistici</a>
+          <a href="http://localhost:3000/LeHS/login.php">Logheaza-te</a>
+          <a href="http://localhost:3000/LeHS/game/highscore.html">Clasament</a>
         </div>
       </div>
     </nav>

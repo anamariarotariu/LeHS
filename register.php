@@ -11,22 +11,28 @@
 <body>
   
 <nav class="nav">
-    <a href="firstpage.php" id="home_btn"> Acasa</a>
-	<a href="learnHTML.html" id="HTML_btn"> HTML</a>
-    <a href="documentatieCSS.html" id="CSS_btn"> CSS</a>
+    <a href="http://localhost:3000/LeHS/firstpage.php" id="home_btn"> Acasa</a>
+	<a href="http://localhost:3000/LeHS/learnHTML.php" id="HTML_btn"> HTML</a>
+    <a href="http://localhost:3000/LeHS/documentatieCSS.php" id="CSS_btn"> CSS</a>
 </nav>
 
 
 <div class="page">
-
-
 <div class="image">
 <img src="./images/login.png" alt="loginImage" id="background_container--img">
 </div>
-<div class="login">
+<div class="register">
 
   <form method="post" action="register.php">
   	<?php include('errors.php'); ?>
+	  <div class="input-group">
+  	  <label>Nume </label>
+  	  <input type="text" name="firstname" value="<?php echo $firstname; ?>">
+  	</div>
+  	<div class="input-group">
+  	  <label>Prenume</label>
+  	  <input type="text" name="lastname" value="<?php echo $lastname; ?>">
+  	</div>
   	<div class="input-group">
   	  <label>Nume utilizator</label>
   	  <input type="text" name="username" value="<?php echo $username; ?>">
@@ -48,7 +54,7 @@
   	</div>
 
   	<p>Ai deja cont?</p>
-	<p> <a href="login.php">Logheaza-te</a></p>
+	<p> <a href="http://localhost:3000/LeHS/login.php">Logheaza-te</a></p>
   	
   </form>
 </div>

@@ -22,7 +22,7 @@ if (isset($_GET['logout'])) {
     <title>Learn CSS</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <nav class="nav">
             <ul>
                 <li>
@@ -30,19 +30,38 @@ if (isset($_GET['logout'])) {
                     <a href="firstpage.php" id="home_btn">Acasă</a>
                     <div class="username">
                     <a href="userProfile.php">
-                     <?php 
-                      if(isset($_SESSION['username'])):
-                       echo $_SESSION['username']; 
-                    else:
-                    echo 'Utilizator';
-                    endif;
+                    <?php 
+                     // if(isset($_SESSION['username'])):
+                     //  echo $_SESSION['username']; 
+                   // else:
+                   // echo 'Utilizator';
+                  //  endif;
                       ?> 
                     </a>  
                     
                 </li>
             </ul>
         </nav>
-    </header>
+    </header> -->
+    <nav class="nav">
+      <a href="firstpage.php" id="home_btn"> Acasa</a>
+      <div class="username">
+        <?php 
+         if(isset($_SESSION['username'])):
+            echo $_SESSION['username']; 
+         else:
+          echo 'Utilizator';
+         endif;
+
+         ?> 
+        <div class="info">
+          <a href="http://localhost:3000/LeHS/userProfile.php">Profil</a>
+          <a href="http://localhost:3000/LeHS/statistics.php">Statistici</a>
+          <a href="http://localhost:3000/LeHS/login.php">Logheaza-te</a>
+          <a href="http://localhost:3000/LeHS/game/highscore.html">Clasament</a>
+        </div>
+      </div>
+    </nav>
     <div class="choose__topic--section">
 
         <button class="doclinks" onmouseover="openDoc(event, 'Link')"> Link</button>

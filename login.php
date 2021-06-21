@@ -22,9 +22,9 @@ include('server.php');
 <body>
 
   <nav class="nav">
-    <a href="firstpage.php" id="home_btn"> Acasa</a>
-    <a href="learnHTML.php" id="HTML_btn"> HTML</a>
-    <a href="documentatieCSS.php" id="CSS_btn"> CSS</a>
+    <a href="http://localhost:3000/LeHS/firstpage.php" id="home_btn"> Acasa</a>
+    <a href="http://localhost:3000/LeHS/learnHTML.php" id="HTML_btn"> HTML</a>
+    <a href="http://localhost:3000/LeHS/documentatieCSS.php" id="CSS_btn"> CSS</a>
   </nav>
 
 

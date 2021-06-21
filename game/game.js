@@ -86,7 +86,7 @@ getNewQuestion = () => {
   if (availableQuestion.length === 0 || questionCounter >= MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
-    return window.location.assign("./game/end.html");
+    return window.location.assign("http://localhost:3000/LeHS/game/end.php");
   }
   questionCounter++;
   progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
