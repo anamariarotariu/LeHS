@@ -86,6 +86,11 @@ h2 {
   background-color: var(--general-color);
   width: 0;
 }
+
+
+.logout a{
+  font-size:2vw;
+}
 /* quit button */
 
 .btn.is-open ~ .description {
@@ -162,6 +167,7 @@ h2 {
 }
 a {
   text-decoration: none;
+
 }
 a.yes {
   padding: 12px 20px;

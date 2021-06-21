@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include('server.php');
 
 ?>
@@ -17,23 +17,16 @@ include('server.php');
 <body>
 
   <nav class="nav">
-    <a href="firstpage.php" id="home_btn"> Acasa</a>
-    <a href="learnHTML.html" id="HTML_btn"> HTML</a>
-    <a href="documentatieCSS.html" id="CSS_btn"> CSS</a>
+    <a href="http://localhost:3000/LeHS/firstpage.php" id="home_btn"> Acasa</a>
+    <a href="http://localhost:3000/LeHS/learnHTML.php" id="HTML_btn"> HTML</a>
+    <a href="http://localhost:3000/LeHS/documentatieCSS.php" id="CSS_btn"> CSS</a>
+
   </nav>
 
-
-
   <div class="page">
-
-
     <div class="image">
       <img src="./images/login.png" alt="loginImage" id="background_container--img"></a>
     </div>
-
-
-
-
 
     <div class="login">
       <form method="post" action="login.php">

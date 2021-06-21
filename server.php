@@ -2,18 +2,22 @@
 
 //initializing variables
 $username = "";
+$lastname = "";
+$firstname = "";
 $email    = "";
 $errors = array();
 
 // connect to the database
 //la mine nu e parolat asta de asta am sters password
-$db = mysqli_connect('localhost', 'root', 'password', 'registration');
+$db = mysqli_connect('localhost', 'root', '', 'registration');
 
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
   $username = mysqli_real_escape_string($db, $_POST['username']);
+  $firstname = mysqli_real_escape_string($db, $_POST['firstname']);
+  $lastname = mysqli_real_escape_string($db, $_POST['lastname']);
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
@@ -22,6 +26,12 @@ if (isset($_POST['reg_user'])) {
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) {
     array_push($errors, "Username is required");
+  }
+  if (empty($firstname)) {
+    array_push($errors, "Firstname is required");
+  }
+  if (empty($lastname)) {
+    array_push($errors, "Lastname is required");
   }
   if (empty($email)) {
     array_push($errors, "Email is required");
@@ -53,8 +63,8 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
     $password = md5($password_1); //encrypt the password before saving in the database
 
-    $query = "INSERT INTO users (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
+    $query = "INSERT INTO users (username, email, password,nume,prenume) 
+  			  VALUES('$username', '$email', '$password','$firstname','$lastname')";
     mysqli_query($db, $query);
     $_SESSION['username'] = $username;
     $_SESSION['success'] = "You are now registered";
@@ -82,10 +92,8 @@ if (isset($_POST['login_user'])) {
     $results = mysqli_query($db, $query);
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['username'] = $username;
+
       $_SESSION['success'] = "You are now logged in";
-      // echo '<script language="javascript">';
-      // echo 'alert("message successfully sent")';
-      // echo '</script>';
       header('location: firstPage.php');
     } else {
       array_push($errors, "Wrong username/password combination");

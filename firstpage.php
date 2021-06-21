@@ -20,23 +20,23 @@
         
         <div class="learn-html-square">
             <h4>HTML</h4>
-            <a href="learnHTML.php" class="button html" >INVATA</a>
+            <a href="http://localhost:3000/LeHS/learnHTML.php" class="button html" >INVATA</a>
         </div>
         <div class="learn-css-square">
             <h4>CSS</h4>
-           <a href="documentatieCSS.php" class="button">INVATA</a>
+           <a href="http://localhost:3000/LeHS/documentatieCSS.php" class="button">INVATA</a>
         </div>
   
     
   
         <div class="practice-html-square">
             <h4>HTML</h4>
-            <a href="game/game.php" class="button html" > EXERSEAZA </a>
+            <a href="http://localhost:3000/LeHS/game/game.php" class="button html" > EXERSEAZA </a>
         </div>
        
         <div class="practice-css-square">
             <h4>CSS</h4>
-           <a href="game/game.php" class="button">EXERSEAZA</a>
+           <a href="http://localhost:3000/LeHS/game/game.php" class="button">EXERSEAZA</a>
         </div>
     
      </div>

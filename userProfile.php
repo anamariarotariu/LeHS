@@ -2,12 +2,12 @@
  session_start(); 
 if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: /lehs/login.php');
+  	header('location:http://localhost:3000/LeHS/login.php');
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
   	unset($_SESSION['username']);
-  	header("location: /lehs/login.php");
+  	header("location:http://localhost:3000/LeHS/login.php");
   }
 ?> 
 
@@ -28,21 +28,48 @@ if (!isset($_SESSION['username'])) {
             <ul>
             <li>
                     <a href="userProfile.php?logout='1'" class="nav-log" >Logout</a>
-                    <a href="firstpage.php" class=" nav--btns home--btn">Acasă</a>
+                    <a href="http://localhost:3000/LeHS/firstpage.php" class=" nav--btns home--btn">Acasă</a>
                     
                 </li>
             </ul>
         </nav>
-        <main>
+
             <div class="user__page">
                 <img src="./images/userlogo.jpg" alt="user-logo" class="user--logo">
                 <div class="user__info">
-                    <p>First Name</p>
-                    <p>Last Name</p>
-                    <p>Email</p>
-                </div>
-                <button type="button" class="edit--btn">Edit info <i class="fas fa-pencil-alt"></i></button>
-            </div>
-        </main>
+                    
+                 <p> Nume utlizator: <?php echo $_SESSION['username']?> <br>
+                
+                 <?php 
+                 $db = mysqli_connect('localhost','root','','registration');
+                 if (!$db) {
+                    die("Connection failed: " . mysqli_connect_error());
+                  }
+                 $username=$_SESSION['username'];
+                 $query =("SELECT * FROM users WHERE username='$username'");
+                  $result = mysqli_query($db, $query);
+
+                  if (mysqli_num_rows($result) > 0) {
+ 
+                  while($row = mysqli_fetch_assoc($result)) {
+                 echo "id: " . $row["id"],
+                 "<br>",
+                 " Nume: " . $row["nume"],
+                 "<br>",
+                  "Prenume: " . $row["prenume"],
+                   "<br>",
+                   "Email: "  . $row["email"],
+                   "<br>";
+                }
+            }
+                 mysqli_close($db);
+                ?>  
+                 </div>
+<div class="btn">
+                 <a href="edit.php?username=<?php echo  $_SESSION['username']  ?>" >Edit</a>
+        </div>
+        
+        </div>     
+        
 </body>
 </html>

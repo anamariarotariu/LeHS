@@ -3,12 +3,13 @@ session_start();
 
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
-    header('location: /LeHS/login.php');
+    header('location: http://localhost:3000/LeHS/login.php');
 }
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
-    header("location: /LeHS/login.php");
+
+    header("location: http://localhost:3000/LeHS/login.php");
 }
 ?>
 
@@ -25,8 +26,8 @@ if (isset($_GET['logout'])) {
 
 <body>
 
-    <p> <a href="game.php?logout='1'">Logout</a> </p>
-
+   
+    <div class="logout" ><a href="game.php?logout='1'">Logout</a> </div>
 
 
 
