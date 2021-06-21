@@ -13,6 +13,7 @@ let availableQuestion = [];
 
 let questions = [];
 function showHtmlQuestions() {
+  console.log("test");
   fetch("http://localhost:5000/api/html-questions")
     .then((res) => {
       return res.json();
@@ -28,6 +29,7 @@ function showHtmlQuestions() {
           loadedQuestion.choice3,
         ];
         formattedQuestion.answer = Math.floor(Math.random() * 3 + 1);
+        console.log(formattedQuestion.answer);
         answerChoices.splice(formattedQuestion.answer - 1, 0);
         answerChoices.forEach((choice, index) => {
           formattedQuestion["choice" + (index + 1)] = choice;
@@ -57,6 +59,7 @@ function showCssQuestions() {
           loadedQuestion.choice3,
         ];
         formattedQuestion.answer = Math.floor(Math.random() * 3 + 1);
+        console.log(formattedQuestion.answer);
         answerChoices.splice(formattedQuestion.answer - 1, 0);
         answerChoices.forEach((choice, index) => {
           formattedQuestion["choice" + (index + 1)] = choice;
@@ -73,7 +76,7 @@ function showCssQuestions() {
 //Constants
 const CORRECT_BONUS = 20;
 const MAX_QUESTIONS = 5;
-showCssQuestions();
+showHtmlQuestions();
 startGame = () => {
   questionCounter = 0;
   score = 0;
