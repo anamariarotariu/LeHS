@@ -10,10 +10,10 @@ let acceptingAnswer = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
-
 let questions = [];
+let url = "http://localhost:5000/api/html-questions";
 function showHtmlQuestions() {
-  fetch("http://localhost:5000/api/html-questions")
+  fetch(url)
     .then((res) => {
       return res.json();
     })
@@ -22,17 +22,17 @@ function showHtmlQuestions() {
         const formattedQuestion = {
           question: loadedQuestion.question,
         };
-        const answerChoices = [
-          loadedQuestion.choice1,
-          loadedQuestion.choice2,
-          loadedQuestion.choice3,
-        ];
-        formattedQuestion.answer = Math.floor(Math.random() * 3 + 1);
-        answerChoices.splice(formattedQuestion.answer - 1, 0);
+        const answerChoices = [loadedQuestion.choice1, loadedQuestion.choice2];
+        //place the answer in a random position
+        formattedQuestion.answer = Math.floor(Math.random() * 2) + 1;
+        answerChoices.splice(
+          formattedQuestion.answer - 1,
+          0,
+          loadedQuestion.answer
+        );
         answerChoices.forEach((choice, index) => {
           formattedQuestion["choice" + (index + 1)] = choice;
         });
-
         return formattedQuestion;
       });
       startGame();
@@ -41,6 +41,7 @@ function showHtmlQuestions() {
       console.log(error);
     });
 }
+showHtmlQuestions();
 function showCssQuestions() {
   fetch("http://localhost:5000/api/css-questions")
     .then((res) => {
@@ -51,13 +52,14 @@ function showCssQuestions() {
         const formattedQuestion = {
           question: loadedQuestion.question,
         };
-        const answerChoices = [
-          loadedQuestion.choice1,
-          loadedQuestion.choice2,
-          loadedQuestion.choice3,
-        ];
+        const answerChoices = [loadedQuestion.choice1, loadedQuestion.choice2];
+        //place the answer in a random position
         formattedQuestion.answer = Math.floor(Math.random() * 3 + 1);
-        answerChoices.splice(formattedQuestion.answer - 1, 0);
+        answerChoices.splice(
+          formattedQuestion.answer - 1,
+          0,
+          loadedQuestion.answer
+        );
         answerChoices.forEach((choice, index) => {
           formattedQuestion["choice" + (index + 1)] = choice;
         });
@@ -73,7 +75,6 @@ function showCssQuestions() {
 //Constants
 const CORRECT_BONUS = 20;
 const MAX_QUESTIONS = 5;
-showCssQuestions();
 startGame = () => {
   questionCounter = 0;
   score = 0;
@@ -93,12 +94,14 @@ getNewQuestion = () => {
   progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
   const questionIndex = Math.floor(Math.random() * availableQuestion.length);
   currentQuestion = availableQuestion[questionIndex];
+  //populate the question container
   question.innerText = currentQuestion.question;
   //populate the answer fields
   choices.forEach((choice) => {
     const number = choice.dataset["number"];
     choice.innerText = currentQuestion["choice" + number];
   });
+  //we splice up the array and we get rid of the questions that have already been shown
   availableQuestion.splice(questionIndex, 1);
   acceptingAnswer = true;
 };
@@ -110,6 +113,8 @@ choices.forEach((choice) => {
     acceptingAnswer = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
+    console.log(currentQuestion);
+    // console.log(selectedAnswer == currentQuestion.answer);
     let classToApply = "incorrect";
     if (selectedAnswer == currentQuestion.answer) {
       classToApply = "correct";
