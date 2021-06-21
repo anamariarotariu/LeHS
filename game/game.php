@@ -26,7 +26,7 @@ if (isset($_GET['logout'])) {
 
 <body>
 
-    <p> <a href="game.php?logout='1'">Logout</a> </p>
+   
     <div class="logout" ><a href="game.php?logout='1'">Logout</a> </div>
 
 

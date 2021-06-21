@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include('server.php');
 
 ?>
@@ -23,18 +23,10 @@ include('server.php');
 
   </nav>
 
-
-
   <div class="page">
-
-
     <div class="image">
       <img src="./images/login.png" alt="loginImage" id="background_container--img"></a>
     </div>
-
-
-
-
 
     <div class="login">
       <form method="post" action="login.php">

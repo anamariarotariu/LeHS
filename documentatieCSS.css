@@ -25,26 +25,10 @@
   height: 7vh;
   font-size: 2vw;
 }
-
-a {
-  text-decoration: none;
-  
-}
-a:hover {
-  background-color: #ddd;
-  color: black;
-}
-.nav a {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-}
-
 #home_btn {color:white;
   margin-left: 5vw;
   margin-top: 0;
 }
-
 .username {
   position: relative;
   margin-left: 85vw;
@@ -64,6 +48,15 @@ a:hover {
 .username:hover .info {
   display: block;
 }
+a {
+  text-decoration: none;
+  
+}
+
+
+
+
+
 .choose__topic--section {
   position: absolute;
   top: 7%;

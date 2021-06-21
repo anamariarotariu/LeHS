@@ -22,27 +22,7 @@ if (isset($_GET['logout'])) {
     <title>Learn CSS</title>
 </head>
 <body>
-    <!-- <header>
-        <nav class="nav">
-            <ul>
-                <li>
-                   
-                    <a href="firstpage.php" id="home_btn">Acasă</a>
-                    <div class="username">
-                    <a href="userProfile.php">
-                    <?php 
-                     // if(isset($_SESSION['username'])):
-                     //  echo $_SESSION['username']; 
-                   // else:
-                   // echo 'Utilizator';
-                  //  endif;
-                      ?> 
-                    </a>  
-                    
-                </li>
-            </ul>
-        </nav>
-    </header> -->
+    
     <nav class="nav">
       <a href="firstpage.php" id="home_btn"> Acasa</a>
       <div class="username">
@@ -62,6 +42,10 @@ if (isset($_GET['logout'])) {
         </div>
       </div>
     </nav>
+
+
+
+    
     <div class="choose__topic--section">
 
         <button class="doclinks" onmouseover="openDoc(event, 'Link')"> Link</button>

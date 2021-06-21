@@ -50,11 +50,12 @@
 }
 .input-group input {
   height: 30px;
-  width: 93%;
+  width: 40%;
   padding: 5px 10px;
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid gray;
+  margin-left:30%;
 }
 .btn {
     margin-left: 35%;
@@ -64,4 +65,7 @@
     background: blueviolet;
     border: none;
     border-radius: 5px;
+  }
+  .btn.delete{
+    margin-left:20%;
   }

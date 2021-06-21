@@ -34,3 +34,7 @@ if ($data['access_token'] != "") {
     header('Location:http://localhost:3000/LeHS/firstpage.php');
     exit;
 }
+else 
+  {
+       header('Location:http://localhost:3000/LeHS/login.php');
+  }
