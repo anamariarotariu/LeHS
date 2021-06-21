@@ -21,7 +21,7 @@
 <div class="image">
 <img src="./images/login.png" alt="loginImage" id="background_container--img">
 </div>
-<div class="register">
+<div class="login">
 
   <form method="post" action="register.php">
   	<?php include('errors.php'); ?>

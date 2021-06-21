@@ -5,8 +5,8 @@ let ok1 = true;
 let ok2 = true;
 const pool = db.createPool({
   connectionLimit: 10,
-  password: "twdb",
-  user: "tw",
+  password: "",
+  user: "root",
   database: "tw",
   host: "localhost",
 });
