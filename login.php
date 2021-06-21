@@ -40,7 +40,7 @@ include('server.php');
           <input type="password" name="password">
         </div>
         <div class="input-group">
-          <button type="submit" class="btn" name="login_user">Logheaza-te</button>
+          <button type="submit" class="btn login--btn" name="login_user">Logheaza-te</button>
         </div>
 
         <p> Sau poti folosi</p>

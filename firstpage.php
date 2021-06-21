@@ -11,12 +11,13 @@
 </head>
 
 <body>
-
-
-
-    <div class="LoginPage">
-        <a href="login.php"><img src="user.png" alt="Login"></a>
-    </div>
+    <nav>
+        <ul>
+            <li> <a href="login.php" id="login--btn" class="nav--btn"> Login </a> </li>
+            <li> <a href="userProfile.php" id="profile--btn" class="nav--btn"> Profil </a> </li>
+            <li> <a href="ghidUtilizare.html" id="tutorial--btn" class="nav--btn"> Tutorial </a></li>
+        </ul>
+    </nav>
     <div class="big-square">
 
         <div class="learn-html-square">
@@ -41,10 +42,6 @@
         </div>
 
     </div>
-
-
-
-    <script src="./game/game.js" type="text/javascript"> </script>
 </body>
 
 </html>
