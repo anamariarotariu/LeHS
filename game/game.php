@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username']) || isset($_SESSION['accessToken'])) {
     $_SESSION['msg'] = "You must log in first";
     header('location: http://localhost:3000/LeHS/login.php');
 }

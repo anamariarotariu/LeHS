@@ -10,10 +10,11 @@ let acceptingAnswer = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
-
 let questions = [];
+
+
 function showHtmlQuestions() {
-  fetch("http://localhost:5000/api/html-questions")
+  fetch("http://localhost:5000/api/html-questions/")
     .then((res) => {
       return res.json();
     })
@@ -41,6 +42,7 @@ function showHtmlQuestions() {
       console.log(error);
     });
 }
+
 function showCssQuestions() {
   fetch("http://localhost:5000/api/css-questions")
     .then((res) => {
