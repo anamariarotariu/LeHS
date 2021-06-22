@@ -102,6 +102,12 @@ a {
 .learn .links {
   font-size: 1.5vw;
 }
+#nivel--btn {
+  position: absolute;
+  top: 80.5%;
+  left: 60%;
+  border: 1px solid #ccc;
+}
 @media (max-width: 1200px) {
   #home_btn {
     font-size: 3vw;

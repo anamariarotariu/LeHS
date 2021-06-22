@@ -24,7 +24,7 @@
   width: 100%;
   height: 7vh;
   float: left;
-  font-size: 2vw;
+  font-size: 3vh;
 }
 #home_btn {
   color: white;
@@ -127,8 +127,43 @@ a {
   background-color: #ddd;
   color: black;
 }
-
+#nivel--btn {
+  position: absolute;
+  top: 45%;
+  left: 66%;
+  border: 1px solid #ccc;
+}
+#nivel--btn:active {
+  transform: scale(0.98);
+}
 /* responsive design */
+@media (max-width: 1390px) {
+  #nivel--btn {
+    top: 48%;
+    left: 68%;
+  }
+}
+@media (max-width: 1250px) {
+  #nivel--btn {
+    left: 70%;
+  }
+}
+@media (max-width: 1130px) {
+  #nivel--btn {
+    top: 52%;
+  }
+}
+@media (max-width: 1109px) {
+  #nivel--btn {
+    top: 55%;
+    left: 72%;
+  }
+}
+@media (max-width: 1015px) {
+  #nivel--btn {
+    left: 76%;
+  }
+}
 @media (max-width: 885px) {
   .choose__topic--section button {
     font-size: 16px;
@@ -142,6 +177,19 @@ a {
   .nav ul li a {
     font-size: 20px;
   }
+  #nivel--btn {
+    font-size: 16px;
+    top: 45.5%;
+  }
+}
+@media (max-width: 696px) {
+  #nivel--btn {
+    top: 48%;
+    width: 7em;
+  }
+  .documentation .final_paragraph {
+    margin-left: -4em;
+  }
 }
 @media (max-width: 670px) {
   .choose__topic--section button {
@@ -149,19 +197,58 @@ a {
     padding-left: 0;
   }
 }
+@media (max-width: 642px) {
+  #nivel--btn {
+    top: 50%;
+  }
+}
 @media (max-width: 595px) {
   .choose__topic--section button {
     font-size: 14px;
   }
+  #nivel--btn {
+    top: 54%;
+  }
+}
+@media (max-width: 519px) {
+  #nivel--btn {
+    top: 67%;
+    left: 30%;
+  }
+}
+@media (max-width: 508px) {
+  .documentation .final_paragraph {
+    margin-left: -3em;
+  }
+  #nivel--btn {
+    top: 70%;
+  }
 }
 @media (max-width: 466px) {
   .nav ul li a {
-    font-size: 15px;
+    font-size: 20px;
+  }
+  #nivel--btn {
+    top: 55%;
   }
   .documentation p {
     font-size: 14px;
   }
   .documentation h3 {
     font-size: 16px;
+  }
+  .documentation .final_paragraph {
+    margin-left: -1em;
+  }
+}
+@media (max-width: 380px) {
+  #nivel--btn {
+    top: 63%;
+  }
+}
+@media (max-width: 330px) {
+  #nivel--btn {
+    top: 70%;
+    left: 25%;
   }
 }

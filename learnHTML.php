@@ -229,6 +229,8 @@ if (isset($_GET['logout'])) {
       id este: scrieți un caracter hash (#), urmat de un nume de id. Apoi,
       definiți proprietățile CSS în interiorul acoladelor {}.
     </p>
+    <p class="final_paragraph"> Daca doresti sa-ti testezi cunostintele:</p>
+    <a href="./chooseHTMLLevel.php" id="nivel--btn"> Alege nivel</a>
   </div>
 
   <script src="learn.js"></script>

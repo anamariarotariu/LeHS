@@ -8,7 +8,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-a {text-decoration:none;}
+a {
+  text-decoration: none;
+}
 .nav {
   background-color: var(--buttons_login_page);
   position: absolute;
@@ -24,15 +26,16 @@ a {
   text-decoration: none;
 }
 .nav--btns {
-  position: relative;
-  margin-left:50%;
+  margin-left: 50%;
   top: 30%;
   color: var(--nav-elements);
   font-size: 20px;
+  position: absolute;
 }
 .nav-log {
   margin-left: 10%;
   top: 30%;
+  position: absolute;
   color: var(--nav-elements);
   font-size: 20px;
 }
@@ -66,16 +69,17 @@ a {
 .edit--btn:active {
   transform: scale(0.98);
 }
-.btn {position: relative;
+.btn {
+  position: relative;
   font-size: 2vw;
   padding: 1rem 0;
   width: 5vw;
   text-align: center;
   border: 0.1rem solid #8a2be2;
-  margin-top:70vh;
-  margin-left:45vw;
+  margin-top: 70vh;
+  margin-left: 45vw;
   text-decoration: none;
-  color:#8a2be2;
+  color: #8a2be2;
   background-color: #fff;
 }
 .btn:hover {
@@ -95,14 +99,14 @@ a {
     left: 33%;
   }
   .user__info {
-    left:33%;
+    left: 33%;
   }
 }
 @media (max-width: 540px) {
   .user--logo {
     left: 10%;
   }
-  .user__info{
+  .user__info {
     left: 15%;
   }
 }

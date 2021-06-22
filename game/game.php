@@ -3,6 +3,7 @@
 session_start();
 if (!isset($_SESSION['username']) || isset($_SESSION['accessToken'])) {
     $_SESSION['msg'] = "You must log in first";
+    echo '<script>alert("You have to login first")</script>';
     header('location: http://localhost:3000/LeHS/login.php');
 }
 if (isset($_GET['logout'])) {
@@ -12,7 +13,6 @@ if (isset($_GET['logout'])) {
     header("location: http://localhost:3000/LeHS/login.php");
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="ro">
 
@@ -25,24 +25,16 @@ if (isset($_GET['logout'])) {
 </head>
 
 <body>
-
-   
-    <div class="logout" ><a href="game.php?logout='1'">Logout</a> </div>
-
-
-
+    <!-- <div class="logout"><a href="game.php?logout='1'">Logout</a> </div> -->
     <div class="container">
         <div id="loader"></div>
         <div id="game" class="justify-center flex-column hidden">
-
-
             <div id="hud">
                 <div id="hud-item1">
                     <p id="progress" class="hud-prefix">
                     </p>
                     <div id="progress--bar">
                         <div id="progress--bar--full">
-
                         </div>
                     </div>
                 </div>
@@ -53,10 +45,6 @@ if (isset($_GET['logout'])) {
                     <h1 class="hud-main-text" id="score"> 0</h1>
                 </div>
             </div>
-
-
-
-
             <h2 id="question"> </h2>
             <div class="choice-container">
                 <p class="choice-prefix">A</p>
@@ -73,15 +61,10 @@ if (isset($_GET['logout'])) {
             </div>
 
         </div>
-
-
-
         <div class="flip-cover-hint"></div>
-
-
         <div class="btn">
             <div class="btn-back">
-                <p>Are you sure you want to do that?</p>
+                <p id="check">Are you sure you want to do that?</p>
                 <a href="end.php" class="yes">Yes</a>
                 <button class="no">No</button>
             </div>
@@ -91,12 +74,6 @@ if (isset($_GET['logout'])) {
     <script src="game.js"></script>
     <script src="quitbutton.js"></script>
     <script src="hintbutton.js"></script>
-
-
-
-
-
-
 </body>
 
 </html>

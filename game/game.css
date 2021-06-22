@@ -70,26 +70,30 @@
 .hud-main-text {
   text-align: center;
   font-size: 2.5vw;
+  position: absolute;
+  top: 10%;
+  right: 4%;
 }
 #progress--bar {
   margin-left: 2.5vw;
   width: 20vw;
   height: 3vw;
+  height: 2vw;
   border: 0.3rem solid var(--general-color);
 }
 h2 {
   font-size: 2vw;
   margin-left: 15%;
+  margin-top: 5%;
 }
 #progress--bar--full {
-  height: 3vw;
+  height: 2vw;
   background-color: var(--general-color);
   width: 0;
 }
 
-
-.logout a{
-  font-size:2vw;
+.logout a {
+  font-size: 2vw;
 }
 /* quit button */
 
@@ -167,7 +171,6 @@ h2 {
 }
 a {
   text-decoration: none;
-
 }
 a.yes {
   padding: 12px 20px;
@@ -349,9 +352,13 @@ a.yes:hover {
   margin-left: 25%;
   margin-top: 5vw;
 }
+/* responsive design */
 @media (max-width: 1200px) {
+  .choice-text {
+    font-size: 20px;
+  }
   h2 {
-    font-size: 3vw;
+    font-size: 25px;
   }
   .hud-main-text {
     margin-top: 1vw;
@@ -363,7 +370,8 @@ a.yes:hover {
     font-size: 3vw;
   }
   .choice-prefix {
-    height: 1.4em;
+    height: 0.8em;
+    font-size: 19px;
   }
   .hint-cover {
     font-size: 4vw;
@@ -371,7 +379,7 @@ a.yes:hover {
   }
   .hint-section,
   .hint-section * {
-    width: 15vw;
+    width: 1.5em;
   }
   .hint-section button,
   .hint-section:hover button {
@@ -382,21 +390,25 @@ a.yes:hover {
     margin-right: 60vw;
   }
   .btn-front {
-    font-size: 4vw;
-    width: 12vw;
+    font-size: 20px;
+    width: 4em;
     height: 6vw;
+    height: 2.5em;
     margin-left: -36vw;
   }
+  .btn-back {
+    background-color: #f0ddf9;
+  }
   .btn-back p {
-    margin-left: 5vw;
+    margin-left: 2em;
   }
   .btn.is-open {
     margin-left: 8vw;
-    width: 200px;
-    height: 100px;
+    width: 15em;
+    height: 7em;
   }
 }
-
+/* responsive design */
 @media (max-width: 500px) {
   .hud-prefix {
     font-size: 4vw;

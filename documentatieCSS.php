@@ -126,7 +126,8 @@ if (isset($_GET['logout'])) {
         <h3>Media Query</h3>
         <p>Media query-urile sunt folosite pentru a realiza un site <span>responsive</span>, în sensul că acesta își va modifica proprietățile în funcție de dimensiunea dispozitivului de pe care este accesat.</p>
         <p>Sintaxa standard este <span>@media (breakpoint) {proprietăți modificate} </span>, unde breakpoint reprezintă dimensiunea ecranului de la care se aplică acele proprietăți modificate aflate între acolade. De obicei, breakpoint-ul se setează folosind proprietățile <span>max-width</span> și <span>min-width</span>.</p>
-        <p class="final_paragraph"> Felicitări că ai parcurs tot modulul de învățare!</p>
+        <p class="final_paragraph"> Daca doresti sa-ti testezi cunostintele:</p>
+        <a href="./chooseCSS.php" id="nivel--btn"> Alege nivel</a>
     </div>
 
     <script src="documentatie.js"></script>
