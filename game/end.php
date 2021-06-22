@@ -15,7 +15,7 @@
             <h1 id="final--score"></h1>
             <form>
                 <input type="text" name="username" id="username--input" placeholder="username">
-                <a href="http://localhost:3000/LeHS/game/highscore.php" class="btn" id="save__score--btn" onclick="saveHighscore(event)">Salveaza</a>
+                <a href="../afterSave.html" class="btn" id="save__score--btn" onclick="saveHighscore(event)">Salveaza</a>
             </form>
             <a href="game.php" class="btn">Play Again</a>
             <a href="/LeHS/firstpage.php " class="btn"> Acasa</a>

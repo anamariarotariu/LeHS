@@ -1,0 +1,15 @@
+body {
+  background-color: #f0ddf9;
+}
+.success--message {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-family: "Montserrat", sans-serif;
+}
+#profile--btn {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  color: #fff;
+}
